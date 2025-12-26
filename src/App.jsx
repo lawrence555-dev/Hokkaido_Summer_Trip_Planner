@@ -104,7 +104,9 @@ function App() {
             </div>
             <div>
               <h4 className="text-[10px] font-bold tracking-widest text-center text-stone-300 uppercase mb-4">Bloom Forecast</h4>
-              <BloomLine />
+              <div className="h-[180px] flex items-center justify-center">
+                <BloomLine />
+              </div>
             </div>
           </div>
         </section>
