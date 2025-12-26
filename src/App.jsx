@@ -17,6 +17,8 @@ function App() {
   const [carRotation, setCarRotation] = useState(0);
   const [weather, setWeather] = useState({ temp: '--', condition: 'Loading' });
   const [exchangeRate, setExchangeRate] = useState('--');
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = React.useRef(null);
 
   useEffect(() => {
     // Fetch Weather (Sapporo)
@@ -52,8 +54,36 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <div className="selection:bg-purple-100 min-h-screen flex flex-col items-center pb-32">
+      {/* Background Music */}
+      <audio ref={audioRef} loop>
+        <source src="https://cdn.pixabay.com/audio/2022/05/13/audio_257112e87f.mp3" type="audio/mpeg" />
+      </audio>
+
+      {/* Music Control Button */}
+      <button
+        onClick={toggleMusic}
+        className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-purple-200 flex items-center justify-center hover:scale-110 transition-transform"
+        aria-label="Toggle music"
+      >
+        {isPlaying ? (
+          <span className="text-2xl">🎵</span>
+        ) : (
+          <span className="text-2xl opacity-50">🎵</span>
+        )}
+      </button>
       <nav className="w-full p-6 flex justify-between items-center max-w-4xl">
         <div className="border-b-4 border-stone-800 pb-1">
           <h1 className="text-base font-bold tracking-[0.4em] font-serif-jp uppercase text-stone-800">Hokkaido '26</h1>
@@ -86,7 +116,7 @@ function App() {
       <header className="relative py-20 px-6 text-center w-full overflow-hidden">
         {/* Map Watermark Background */}
         <div
-          className="absolute inset-0 z-0 opacity-[0.08] pointer-events-none"
+          className="absolute inset-0 z-0 opacity-50 pointer-events-none"
           style={{
             backgroundImage: `url('/hokkaido_map_watermark.png')`,
             backgroundSize: 'contain',
