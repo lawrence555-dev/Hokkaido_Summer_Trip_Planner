@@ -122,7 +122,7 @@ function App() {
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            filter: 'grayscale(100%)'
+            // filter: 'grayscale(100%)' // Removed to increase visibility
           }}
         ></div>
 
