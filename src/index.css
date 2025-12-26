@@ -52,7 +52,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 50;
+  z-index: 5;
   font-size: 24px;
   transition: top 0.1s linear, transform 0.1s linear;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));

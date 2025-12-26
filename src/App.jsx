@@ -83,10 +83,27 @@ function App() {
         </div>
       </div>
 
-      <header className="py-12 px-6 text-center w-full">
-        <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&q=80&w=150" alt="lavender" className="w-20 h-20 mx-auto opacity-30 mb-4" />
-        <h2 className="text-4xl font-serif-jp font-bold mb-6 text-stone-800">北の大地・<span className="text-purple-600">旅の手帖</span></h2>
-        <p className="font-handwriting text-stone-400 text-lg leading-relaxed px-10 opacity-70">「2026年、夏。紫色的花畑で会いましょう。今は絕好の旅どきです！」</p>
+      <header className="relative py-20 px-6 text-center w-full overflow-hidden">
+        {/* Map Watermark Background */}
+        <div
+          className="absolute inset-0 z-0 opacity-[0.08] pointer-events-none"
+          style={{
+            backgroundImage: `url('/hokkaido_map_watermark.png')`,
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            filter: 'grayscale(100%)'
+          }}
+        ></div>
+
+        <div className="relative z-10">
+          <h2 className="text-4xl font-serif-jp font-bold mb-6 text-stone-800 leading-tight">
+            北の大地・<span className="text-purple-600">旅の手帖</span>
+          </h2>
+          <p className="font-handwriting text-stone-500 text-lg leading-relaxed px-10 max-w-lg mx-auto">
+            「2026年、夏。紫色的花畑で会いましょう。今は絕好の旅どきです！」
+          </p>
+        </div>
       </header>
 
       <main className="w-full max-w-md px-4">
