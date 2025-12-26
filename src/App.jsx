@@ -98,7 +98,9 @@ function App() {
           <div className="space-y-12">
             <div>
               <h4 className="text-[10px] font-bold tracking-widest text-center text-stone-300 uppercase mb-4">Analysis Radar</h4>
-              <ComparisonRadar plan={currentPlan} />
+              <div className="h-[280px] flex items-center justify-center">
+                <ComparisonRadar plan={currentPlan} />
+              </div>
             </div>
             <div>
               <h4 className="text-[10px] font-bold tracking-widest text-center text-stone-300 uppercase mb-4">Bloom Forecast</h4>

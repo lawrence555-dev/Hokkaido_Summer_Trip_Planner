@@ -39,7 +39,8 @@ export const ComparisonRadar = ({ plan }) => {
 
     const options = {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRatio: 1,
         plugins: { legend: { display: false } },
         scales: {
             r: {
