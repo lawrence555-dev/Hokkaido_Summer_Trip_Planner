@@ -8,9 +8,9 @@ const itineraryData = [
     title: "抵達．北國之門",
     spots: ["新千歲機場入境與取車手續", "機場國內線商店街採買零食", "道央自動車道：岩見澤休息站", "旭川市區：大雪地啤酒館午餐", "AEON Mall 旭川站前店採買", "入住旭川精品商旅", "成吉思汗大黑屋烤肉晚餐"],
     photos: [
-      "https://images.unsplash.com/photo-1674725690428-948af1d7f5a1?auto=format&fit=crop&q=80&w=300", // New Chitose Airport / Plane
-      "https://images.unsplash.com/photo-1614563637806-1d0e645e0940?auto=format&fit=crop&q=80&w=300", // Ramen / Food
-      "https://images.unsplash.com/photo-1704135489566-3929fc2a4fec?auto=format&fit=crop&q=80&w=300"  // Jingisukan (Genghis Khan BBQ style)
+      "https://images.unsplash.com/photo-1674725690428-948af1d7f5a1?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1614563637806-1d0e645e0940?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1704135489566-3929fc2a4fec?auto=format&fit=crop&q=80&w=300"
     ]
   },
   {
@@ -19,9 +19,9 @@ const itineraryData = [
     title: "動物園與拼布花海",
     spots: ["旭山動物園：企鵝與海豹館", "旭川拉麵村：午餐時光", "美瑛：北西之丘展望公園", "拼布之路：七星之樹與親子之樹", "亞斗夢之丘：自駕賞花點", "Ken & Mary 之樹攝影", "入住美瑛森林系民宿"],
     photos: [
-      "https://images.unsplash.com/photo-1631848351521-c99aed909530?auto=format&fit=crop&q=80&w=300", // Penguin/Zoo
-      "https://images.unsplash.com/photo-1722482445722-19c5c4989ec6?auto=format&fit=crop&q=80&w=300", // Biei Patchwork Road
-      "https://images.unsplash.com/photo-1659656066247-053c5150dea5?auto=format&fit=crop&q=80&w=300"  // Biei Tree
+      "https://images.unsplash.com/photo-1631848351521-c99aed909530?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1722482445722-19c5c4989ec6?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1659656066247-053c5150dea5?auto=format&fit=crop&q=80&w=300"
     ]
   },
   {
@@ -30,9 +30,9 @@ const itineraryData = [
     title: "青池幻境與四季彩",
     spots: ["十勝岳望岳台展望站", "白金瀑布：感受藍色溪流", "白金青池：晨間靜謐攝影", "四季彩之丘：搭乘遊覽牽引車", "拓真館：美瑛風景攝影展", "美瑛選果：在地農產品採買", "純平炸蝦飯 (需提早排隊)"],
     photos: [
-      "https://images.unsplash.com/photo-1687784529277-3d3709faec5e?auto=format&fit=crop&q=80&w=300", // Blue Pond (Aoiike) - Style
-      "https://images.unsplash.com/photo-1757140093290-3ff3d53d9b85?auto=format&fit=crop&q=80&w=300", // Flower field (Four Seasons Hill)
-      "https://images.unsplash.com/photo-1722482445722-19c5c4989ec6?auto=format&fit=crop&q=80&w=300"  // Biei scenery
+      "https://images.unsplash.com/photo-1687784529277-3d3709faec5e?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1757140093290-3ff3d53d9b85?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1722482445722-19c5c4989ec6?auto=format&fit=crop&q=80&w=300"
     ]
   },
   {
@@ -41,9 +41,9 @@ const itineraryData = [
     title: "薰衣草花道制霸",
     spots: ["富田農場：五彩花田與哈密瓜", "薰衣草東站：搭乘賞花吊椅", "中富良野：北星山町營花園", "森之時計咖啡館：磨咖啡豆體驗", "富良野起司工房：手工冰淇淋", "精靈露台：夜晚點燈漫步", "入住富良野溫泉飯店"],
     photos: [
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=300", // Lavender Field close up
-      "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?auto=format&fit=crop&q=80&w=300", // Furano Flower Field
-      "https://images.unsplash.com/photo-1596677352741-0d3d0431c123?auto=format&fit=crop&q=80&w=300"  // Melon / Food
+      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1596677352741-0d3d0431c123?auto=format&fit=crop&q=80&w=300"
     ]
   },
   {
@@ -52,9 +52,9 @@ const itineraryData = [
     title: "森林公路與札幌",
     spots: ["富良野果醬園：採買自製果醬", "麵包超人專門店 (伴手禮)", "桂澤湖景觀自駕公路", "札幌市區：大通公園電視塔", "狸小路商店街：藥妝最後補貨", "藻岩山纜車：欣賞百萬夜景", "札幌必吃：湯咖哩名店之旅"],
     photos: [
-      "https://images.unsplash.com/photo-1645611539916-e9b328d3832c?auto=format&fit=crop&q=80&w=300", // Sapporo TV Tower
-      "https://images.unsplash.com/photo-1557409518-691ebcd96038?auto=format&fit=crop&q=80&w=300", // Sapporo Street/Night
-      "https://images.unsplash.com/photo-1605001011156-cbf0b0f67a51?auto=format&fit=crop&q=80&w=300"  // Soup Curry
+      "https://images.unsplash.com/photo-1645611539916-e9b328d3832c?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1557409518-691ebcd96038?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1605001011156-cbf0b0f67a51?auto=format&fit=crop&q=80&w=300"
     ]
   },
   {
@@ -63,9 +63,9 @@ const itineraryData = [
     title: "浪漫小樽時光",
     spots: ["小樽運河：歷史建築漫步", "北一硝子三號館：煤氣燈咖啡", "堺町通：LeTAO 總店甜點巡禮", "小樽音樂盒堂：欣賞報時鳴奏", "天狗山纜車：眺望海港落日", "政壽司：品嚐新鮮海港味", "運河沿岸居酒屋小酌"],
     photos: [
-      "https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&q=80&w=300", // Otaru Canal
-      "https://images.unsplash.com/photo-1696677049468-73fb9c6aea2b?auto=format&fit=crop&q=80&w=300", // Glass / Music Box style
-      "https://images.unsplash.com/photo-1555529733-0e670560f7e1?auto=format&fit=crop&q=80&w=300"  // Sushi
+      "https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1696677049468-73fb9c6aea2b?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1555529733-0e670560f7e1?auto=format&fit=crop&q=80&w=300"
     ]
   },
   {
@@ -74,18 +74,19 @@ const itineraryData = [
     title: "最終採買與歸途",
     spots: ["二條市場：海鮮丼早餐", "北海道大學：銀杏林散策", "三井 Outlet Park 札幌北廣島", "機場還車中心：歸還租賃車", "新千歲機場國內線：Royce 巧克力", "機場美食區：最後一碗拉麵", "平安登機，告別北海道"],
     photos: [
-      "https://images.unsplash.com/photo-1575253301299-db3f10d814dd?auto=format&fit=crop&q=80&w=300", // Seafood Rice Bowl (Kaisendon)
-      "https://images.unsplash.com/photo-1535924571710-4c6e27716b6d?auto=format&fit=crop&q=80&w=300", // Soft serve / Hokkaido treats
-      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=300"  // Airplane wing / leaving
+      "https://images.unsplash.com/photo-1575253301299-db3f10d814dd?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1535924571710-4c6e27716b6d?auto=format&fit=crop&q=80&w=300",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=300"
     ]
   }
 ];
 
 function App() {
+  const [selectedDay, setSelectedDay] = useState(1);
   const [currentPlan, setCurrentPlan] = useState('A');
-  const [carPos, setCarPos] = useState(0);
-  const [carRotation, setCarRotation] = useState(0);
   const [checkedItems, setCheckedItems] = useState({});
+  const [weather, setWeather] = useState({ temp: '--', condition: 'Loading' });
+  const [exchangeRate, setExchangeRate] = useState('--');
 
   const toggleCheck = (id) => {
     setCheckedItems(prev => ({
@@ -93,8 +94,6 @@ function App() {
       [id]: !prev[id]
     }));
   };
-  const [weather, setWeather] = useState({ temp: '--', condition: 'Loading' });
-  const [exchangeRate, setExchangeRate] = useState('--');
 
   useEffect(() => {
     // Fetch Weather (Sapporo)
@@ -116,20 +115,7 @@ function App() {
         }
       })
       .catch(err => console.error('Rate error:', err));
-
-    const handleScroll = () => {
-      const iten = document.getElementById('itinerary');
-      if (!iten) return;
-      const rect = iten.getBoundingClientRect();
-      const progress = Math.max(0, Math.min(1, -rect.top / (rect.height - window.innerHeight)));
-      setCarPos(progress * (rect.height - 100));
-      setCarRotation(Math.sin(window.scrollY * 0.1) * 5);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
 
   return (
     <div className="selection:bg-purple-100 min-h-screen flex flex-col items-center pb-32">
@@ -163,7 +149,6 @@ function App() {
       </div>
 
       <header className="relative py-20 px-6 text-center w-full overflow-hidden">
-        {/* Map Watermark Background */}
         <div
           className="absolute inset-0 z-0 opacity-50 pointer-events-none"
           style={{
@@ -171,7 +156,6 @@ function App() {
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            // filter: 'grayscale(100%)' // Removed to increase visibility
           }}
         ></div>
 
@@ -188,8 +172,8 @@ function App() {
       <main className="w-full max-w-md px-4">
         <section className="mb-20 bg-stone-200/20 p-6 rounded-[40px] border border-white/50 backdrop-blur-sm shadow-inner">
           <div className="flex flex-col gap-2 bg-stone-200/40 p-2 rounded-[28px] mb-8">
-            <button className={`py - 4 rounded - 2xl font - bold transition - all ${currentPlan === 'A' ? 'bg-white text-wa-purple shadow-md' : 'text-stone-400'} `} onClick={() => setCurrentPlan('A')}>PLAN A 精華</button>
-            <button className={`py - 4 rounded - 2xl font - bold transition - all ${currentPlan === 'B' ? 'bg-white text-wa-purple shadow-md' : 'text-stone-400'} `} onClick={() => setCurrentPlan('B')}>PLAN B 慢賞</button>
+            <button className={`py-4 rounded-2xl font-bold transition-all ${currentPlan === 'A' ? 'bg-white text-wa-purple shadow-md' : 'text-stone-400'}`} onClick={() => setCurrentPlan('A')}>PLAN A 精華</button>
+            <button className={`py-4 rounded-2xl font-bold transition-all ${currentPlan === 'B' ? 'bg-white text-wa-purple shadow-md' : 'text-stone-400'}`} onClick={() => setCurrentPlan('B')}>PLAN B 慢賞</button>
           </div>
           <div className="space-y-12">
             <div>
@@ -207,16 +191,33 @@ function App() {
           </div>
         </section>
 
-        <section id="itinerary" className="relative pt-10">
-          <div className="timeline-path"></div>
-          <div id="scrolling-car" style={{ top: `${carPos} px`, transform: `rotate(${carRotation}deg)` }}>🚗</div>
+        <section id="itinerary" className="relative pt-6">
+          <div className="flex flex-col gap-8">
+            {/* Horizontal Day Selector (橫向日期排列) */}
+            <div className="flex overflow-x-auto gap-3 pb-6 no-scrollbar -mx-4 px-6 snap-x snap-mandatory scroll-smooth">
+              {itineraryData.map((item) => (
+                <button
+                  key={item.day}
+                  onClick={() => setSelectedDay(item.day)}
+                  className={`snap-center shrink-0 flex flex-col items-center justify-center w-[84px] h-[100px] rounded-[32px] border-2 transition-all duration-300 ${selectedDay === item.day
+                      ? 'bg-wa-purple text-white border-wa-purple shadow-lg scale-105'
+                      : 'bg-white/50 text-stone-400 border-white/80 hover:bg-white/80'
+                    }`}
+                >
+                  <span className={`text-[10px] font-bold ${selectedDay === item.day ? 'opacity-90' : 'opacity-40'}`}>DAY</span>
+                  <span className="text-2xl font-black">{item.day}</span>
+                  <span className={`text-[8px] font-bold mt-1 ${selectedDay === item.day ? 'opacity-90' : 'opacity-50'}`}>
+                    {item.date.split(' ')[0]}
+                  </span>
+                </button>
+              ))}
+            </div>
 
-          <div className="flex flex-col gap-[40vh]">
-            {itineraryData.map((item, idx) => (
-              <div key={idx} className="wa-card p-8">
+            {/* Selected Day Content */}
+            {itineraryData.filter(d => d.day === selectedDay).map((item) => (
+              <div key={item.day} className="wa-card p-8">
                 <div className="washi-tape"></div>
                 <div className="flex justify-between items-start mb-8 relative">
-                  {/* Vertical Japanese Label */}
                   <div className="absolute -left-2 top-0 writing-vertical-rl text-xs font-serif-jp text-stone-300 tracking-widest opacity-60">
                     第{item.day}日
                   </div>
@@ -232,8 +233,7 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-serif-jp font-bold mb-10 border-l-4 border-wa-purple/20 pl-4">{item.title}</h3>
                 <div className="flex flex-col gap-6">
-                  {/* Photo Carousel (Polaroid Style) */}
-                  <div className="flex gap-4 overflow-x-auto pb-4 snap-x pl-2">
+                  <div className="flex gap-4 overflow-x-auto pb-4 snap-x pl-2 no-scrollbar">
                     {item.photos.map((photo, pIdx) => (
                       <div key={pIdx} className="snap-center shrink-0 w-40 h-52 bg-white p-2 shadow-sm rotate-1 first:-rotate-2 last:rotate-2 border border-gray-100">
                         <div className="w-full h-40 bg-gray-100 overflow-hidden mb-2">
@@ -245,19 +245,19 @@ function App() {
                   </div>
 
                   {item.spots.map((spot, sIdx) => {
-                    const spotId = `${item.day} -${sIdx} `;
+                    const spotId = `${item.day}-${sIdx}`;
                     const isChecked = checkedItems[spotId];
                     return (
                       <div key={sIdx}
                         className="flex items-start gap-4 cursor-pointer group"
                         onClick={() => toggleCheck(spotId)}
                       >
-                        <div className={`relative w - 6 h - 6 shrink - 0 mt - 1 border - 2 rounded - full flex items - center justify - center transition - colors ${isChecked ? 'border-red-400' : 'border-stone-300'} `}>
+                        <div className={`relative w-6 h-6 shrink-0 mt-1 border-2 rounded-full flex items-center justify-center transition-colors ${isChecked ? 'border-red-400' : 'border-stone-300'}`}>
                           {isChecked && (
                             <span className="text-red-500 font-serif-jp font-bold text-xs stamp-animation">済</span>
                           )}
                         </div>
-                        <span className={`text - lg font - handwriting transition - colors leading - relaxed ${isChecked ? 'text-stone-300 line-through decoration-stone-300' : 'text-stone-600 group-hover:text-wa-purple'} `}>
+                        <span className={`text-lg font-handwriting transition-colors leading-relaxed ${isChecked ? 'text-stone-300 line-through decoration-stone-300' : 'text-stone-600 group-hover:text-wa-purple'}`}>
                           {spot}
                         </span>
                       </div>
