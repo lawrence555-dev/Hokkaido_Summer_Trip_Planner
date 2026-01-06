@@ -15,7 +15,7 @@ const itineraryData = [
     date: "07/08 Wed.",
     title: "小樽漫步與 Outlet 大採購",
     spots: ["小樽運河、音樂盒堂、北一硝子館", "三井 Outlet Park 札幌北廣島 (掃貨至 20:00)", "回札幌 Vessel Inn 中島公園休息"],
-    photos: ["https://images.unsplash.com/photo-1473181475561-9cd74633833f?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&q=80&w=300"]
+    photos: ["/images/day2/otaru_canal.jpg", "/images/day2/mitsui_outlet.png", "/images/day2/vessel_inn_park.jpg"]
   },
   {
     day: 3,
