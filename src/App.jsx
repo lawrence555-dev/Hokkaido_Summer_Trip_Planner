@@ -36,7 +36,7 @@ const itineraryData = [
     date: "07/11 Sat.",
     title: "登別溫泉與大型水樂園",
     spots: ["慢享早餐後開往登別 (約 2.5 小時)", "地獄谷散策與大湯沼川天然足湯", "入住第一瀧本館 (超大水樂園)", "溫泉泊：大人泡湯，小孩水池放電"],
-    photos: ["https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?auto=format&fit=crop&q=80&w=300"]
+    photos: ["/images/day5/noboribetsu_jigokudani.png", "/images/day5/oyunuma.jpg", "/images/day5/dai_ichi_takimotokan.jpg"]
   },
   {
     day: 6,
