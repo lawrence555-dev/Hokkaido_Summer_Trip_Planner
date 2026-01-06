@@ -5,50 +5,50 @@ const itineraryData = [
   {
     day: 1,
     date: "07/07 Tue.",
-    title: "抵達．北國之門",
-    spots: ["新千歲機場入境與取車手續", "旭川市區：大雪地啤酒館午餐", "成吉思汗大黑屋烤肉晚餐"],
-    photos: ["https://images.unsplash.com/photo-1674725690428-948af1d7f5a1?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1614563637806-1d0e645e0940?auto=format&fit=crop&q=80&w=300"]
+    title: "抵達與札幌購物夜",
+    spots: ["抵達新千歲機場入境與領行李", "搭乘 OTS 接駁車領取 7 人座 (推薦 Noah/Voxy)", "加購 HEP 高速公路通行證", "貍小路商店街補齊藥妝與零食", "晚餐：湯咖哩或成吉思汗烤肉"],
+    photos: ["https://images.unsplash.com/photo-1674725690428-948af1d7f5a1?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1570160244190-25e9821a8d0b?auto=format&fit=crop&q=80&w=300"]
   },
   {
     day: 2,
     date: "07/08 Wed.",
-    title: "動物園與拼布花海",
-    spots: ["旭山動物園：企鵝與海豹館", "美瑛：北西之丘展望公園", "拼布之路：七星之樹"],
-    photos: ["https://images.unsplash.com/photo-1631848351521-c99aed909530?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1722482445722-19c5c4989ec6?auto=format&fit=crop&q=80&w=300"]
+    title: "小樽漫步與 Outlet 大採購",
+    spots: ["小樽運河、音樂盒堂、北一硝子館", "三井 Outlet Park 札幌北廣島 (掃貨至 20:00)", "回札幌 Vessel Inn 中島公園休息"],
+    photos: ["https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1583333222624-9b6574a38340?auto=format&fit=crop&q=80&w=300"]
   },
   {
     day: 3,
     date: "07/09 Thu.",
-    title: "青池幻境與四季彩",
-    spots: ["白金青池：晨間靜謐攝影", "四季彩之丘：花海巡禮", "純平炸蝦飯"],
-    photos: ["https://images.unsplash.com/photo-1687784529277-3d3709faec5e?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1757140093290-3ff3d53d9b85?auto=format&fit=crop&q=80&w=300"]
+    title: "旭山動物園與旭川親子時光",
+    spots: ["自駕前往旭山動物園 (約 2 小時)", "親子時間：看到企鵝、北極熊與海豹", "AEON 購物中心補貨", "入住 OMO7 旭川 (星野集團)"],
+    photos: ["https://images.unsplash.com/photo-1631848351521-c99aed909530?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1557409518-691ebcd96038?auto=format&fit=crop&q=80&w=300"]
   },
   {
     day: 4,
     date: "07/10 Fri.",
-    title: "薰衣草花道制霸",
-    spots: ["富田農場：五彩花田", "精靈露台：夜晚點燈漫步", "入住富良野溫泉飯店"],
-    photos: ["https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?auto=format&fit=crop&q=80&w=300"]
+    title: "美瑛與富良野：花季最高峰",
+    spots: ["四季彩之丘 (搭乘七彩遊園車)", "青池與白鬚瀑布靜謐攝影", "富田農場：欣賞滿開薰衣草", "森林精靈露台：夜晚點燈漫步", "入住新富良野王子大飯店"],
+    photos: ["https://images.unsplash.com/photo-1687704519962-793db5f87b8d?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=300"]
   },
   {
     day: 5,
     date: "07/11 Sat.",
-    title: "森林公路與札幌",
-    spots: ["札幌市區：大通公園電視塔", "狸小路商店街：藥妝補貨", "藻岩山纜車：欣賞百萬夜景"],
-    photos: ["https://images.unsplash.com/photo-1645611539916-e9b328d3832c?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1557409518-691ebcd96038?auto=format&fit=crop&q=80&w=300"]
+    title: "登別溫泉與大型水樂園",
+    spots: ["慢享早餐後開往登別 (約 2.5 小時)", "地獄谷散策與大湯沼川天然足湯", "入住第一瀧本館 (超大水樂園)", "溫泉泊：大人泡湯，小孩水池放電"],
+    photos: ["https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?auto=format&fit=crop&q=80&w=300"]
   },
   {
     day: 6,
     date: "07/12 Sun.",
-    title: "浪漫小樽時光",
-    spots: ["小樽運河：歷史建築漫步", "堺町通：LeTAO 總店甜點巡禮", "壽司名店午餐"],
-    photos: ["https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1555529733-0e670560f7e1?auto=format&fit=crop&q=80&w=300"]
+    title: "洞爺湖煙火之夜",
+    spots: ["昭和新山熊牧場餵可愛棕熊", "搭乘洞爺湖汽船巡航湖光山色", "20:45 洞爺湖花火大會 (躺在房間看)", "入住乃之風渡假飯店 (面湖房)"],
+    photos: ["https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1535924571710-4c6e27716b6d?auto=format&fit=crop&q=80&w=300"]
   },
   {
     day: 7,
     date: "07/13 Mon.",
-    title: "歸途．新千歲",
-    spots: ["二條市場：海鮮丼早餐", "機場還車與登機", "告別北海道"],
+    title: "機場最後巡禮與返台",
+    spots: ["OTS 千歲營業所還車 (附近加滿油)", "機場 2 樓名產甜點最後採買", "機場 3 樓哆啦 A 夢與 Hello Kitty 樂園", "機場還車與登機返台"],
     photos: ["https://images.unsplash.com/photo-1575253301299-db3f10d814dd?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=300"]
   }
 ];
@@ -137,7 +137,7 @@ function App() {
             北の大地・<span className="text-purple-600">旅の手帖</span>
           </h2>
           <p className="font-handwriting text-stone-500 text-lg leading-relaxed px-10 max-w-lg mx-auto">
-            「2026年、夏。紫色的花畑で会いましょう。今は絕好の旅どきです！」
+            「2026年、夏。親子自駕、煙火與購物、紫色的花畑。絕好の旅どきです！」
           </p>
         </div>
       </header>
@@ -158,6 +158,26 @@ function App() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="mb-10 bg-purple-50/50 p-6 rounded-[40px] border border-purple-100/50 backdrop-blur-sm shadow-sm">
+          <h4 className="flex items-center gap-2 text-wa-purple font-bold text-sm mb-4">
+            <span>💡</span> 旅程小撇步 (Travel Tips)
+          </h4>
+          <ul className="text-xs space-y-3 text-stone-600 leading-relaxed font-serif-jp">
+            <li className="flex gap-2">
+              <span className="text-purple-400">🚗</span>
+              <span><strong>OTS 租車：</strong> 建議選 7 人座 (Noah/Voxy)。3大1小+4行李+推車，一般 SUV 放不下。領車必買 <strong>HEP</strong> 全包高速路費。</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-purple-400">🏨</span>
+              <span><strong>住宿建議：</strong> 札幌推 Vessel Inn (早餐強)；溫泉區找 <strong>和洋室</strong> 房型，空間最大。</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-purple-400">🎆</span>
+              <span><strong>洞爺湖煙火：</strong> 20:45 施放。住 <strong>乃之風</strong> 面湖房可直接在陽台觀賞最佳效果。</span>
+            </li>
+          </ul>
         </section>
 
         <section id="itinerary" className="relative pt-6">
