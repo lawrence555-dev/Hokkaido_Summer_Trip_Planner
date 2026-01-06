@@ -23,8 +23,8 @@ ChartJS.register(
     LinearScale
 );
 
-export const ComparisonRadar = ({ plan }) => {
-    const data = plan === 'A' ? [95, 65, 60, 95, 85] : [80, 90, 95, 75, 70];
+export const ComparisonRadar = () => {
+    const data = [95, 65, 60, 95, 85]; // Hardcoded to Plan A stats
 
     const radarData = {
         labels: ['景點', '餘裕', '購物', '效率', '預算'],
