@@ -43,7 +43,7 @@ const itineraryData = [
     date: "07/12 Sun.",
     title: "洞爺湖煙火之夜",
     spots: ["昭和新山熊牧場餵可愛棕熊", "搭乘洞爺湖汽船巡航湖光山色", "20:45 洞爺湖花火大會 (躺在房間看)", "入住乃之風渡假飯店 (面湖房)"],
-    photos: ["https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1535924571710-4c6e27716b6d?auto=format&fit=crop&q=80&w=300"]
+    photos: ["/images/day6/showa_shinzan_bear_park.jpg", "/images/day6/toyako_cruise.jpg", "/images/day6/toyako_fireworks.jpg"]
   },
   {
     day: 7,
