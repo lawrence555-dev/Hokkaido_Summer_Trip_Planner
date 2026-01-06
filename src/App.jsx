@@ -22,7 +22,7 @@ const itineraryData = [
     date: "07/09 Thu.",
     title: "旭山動物園與旭川親子時光",
     spots: ["自駕前往旭山動物園 (約 2 小時)", "親子時間：看到企鵝、北極熊與海豹", "AEON 購物中心補貨", "入住 OMO7 旭川 (星野集團)"],
-    photos: ["https://images.unsplash.com/photo-1631848351521-c99aed909530?auto=format&fit=crop&q=80&w=300", "https://images.unsplash.com/photo-1557409518-691ebcd96038?auto=format&fit=crop&q=80&w=300"]
+    photos: ["/images/day3/asahiyama_zoo.jpg", "/images/day3/aeon_mall.png", "/images/day3/omo7_asahikawa.jpg"]
   },
   {
     day: 4,
