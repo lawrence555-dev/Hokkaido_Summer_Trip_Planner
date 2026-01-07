@@ -189,6 +189,72 @@ function App() {
         </div>
       </header>
       <main className="w-full max-w-md px-4">
+        <section className="mb-10 wa-card p-6 shadow-sm overflow-hidden border-dashed border-stone-200">
+          <div className="absolute top-0 right-0 bg-stone-800 text-white text-[10px] px-3 py-1 font-bold rounded-bl-lg">
+            FLIGHT LOGISTICS
+          </div>
+          <h4 className="flex items-center gap-2 text-stone-800 font-bold text-sm mb-6">
+            <span>✈️</span> 航班資訊 (Flight Details)
+          </h4>
+          <div className="space-y-6">
+            <div className="flex items-center gap-4 bg-white/40 p-3 rounded-2xl border border-white/60">
+              <div className="w-12 h-12 shrink-0 bg-white rounded-xl p-1 shadow-sm overflow-hidden flex items-center justify-center">
+                <img src="/images/airlines/starlux_logo.png" alt="Starlux" className="w-full h-full object-contain scale-110" />
+              </div>
+              <div className="flex-1">
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-[10px] font-bold text-stone-400">去程 | 07/07 Tue.</span>
+                  <span className="text-[10px] font-black text-wa-purple bg-purple-50 px-2 py-0.5 rounded">JX850</span>
+                </div>
+                <div className="flex justify-between items-end">
+                  <div>
+                    <p className="text-lg font-black text-stone-700 leading-none">10:05</p>
+                    <p className="text-[8px] font-bold text-stone-400 mt-1">桃機 TPE (T1)</p>
+                  </div>
+                  <div className="flex-1 flex flex-col items-center px-4 mb-2">
+                    <div className="w-full h-[1px] bg-stone-200 relative mb-1">
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10px] text-stone-300">✈️</div>
+                    </div>
+                    <span className="text-[8px] text-stone-300 font-mono">A330-900neo</span>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-lg font-black text-stone-700 leading-none">15:10</p>
+                    <p className="text-[8px] font-bold text-stone-400 mt-1">新千歲 CTS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 bg-white/40 p-3 rounded-2xl border border-white/60">
+              <div className="w-12 h-12 shrink-0 bg-white rounded-xl p-1 shadow-sm overflow-hidden flex items-center justify-center">
+                <img src="/images/airlines/jal_logo.png" alt="JAL" className="w-full h-full object-contain" />
+              </div>
+              <div className="flex-1">
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-[10px] font-bold text-stone-400">回程 | 07/13 Mon.</span>
+                  <span className="text-[10px] font-black text-red-500 bg-red-50 px-2 py-0.5 rounded">JL508</span>
+                </div>
+                <div className="flex justify-between items-end">
+                  <div>
+                    <p className="text-lg font-black text-stone-700 leading-none">11:45</p>
+                    <p className="text-[8px] font-bold text-stone-400 mt-1">新千歲 (國內線D)</p>
+                  </div>
+                  <div className="flex-1 flex flex-col items-center px-4 mb-2">
+                    <div className="w-full h-[1px] bg-stone-200 relative mb-1">
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10px] text-stone-300 rotate-180">✈️</div>
+                    </div>
+                    <span className="text-[8px] text-stone-300 font-mono">A350 廣體機</span>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-lg font-black text-stone-700 leading-none">13:25</p>
+                    <p className="text-[8px] font-bold text-stone-400 mt-1">羽田 HND (T1)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mb-10 bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-[40px] border border-orange-100 shadow-sm">
           <h4 className="flex items-center gap-2 text-orange-600 font-bold text-sm mb-4">
             <span>🌟</span> 3 大 1 小 行程貼士 (Pro Tips)
