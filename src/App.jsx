@@ -16,7 +16,11 @@ const itineraryData = [
       { time: "20:30", label: "購物", activity: "逛狸小路商店街 1~7 段，補齊藥妝與唐吉訶德雜貨。" }
     ],
     accommodation: "札幌 Vessel Inn 中島公園 (海鮮早餐極強)",
-    photos: ["/images/day1/ots_rental.png", "/images/day1/tanukikoji.jpg", "/images/day1/soup_curry.jpg"]
+    photos: ["/images/day1/ots_rental.png", "/images/day1/tanukikoji.jpg", "/images/day1/soup_curry.jpg"],
+    recommendations: [
+      { type: "food", title: "湯咖哩 (Soup Curry)", desc: "札幌靈魂食物，推薦 Tenjiku 或 Samurai。" },
+      { type: "food", title: "成吉思汗烤肉", desc: "狸小路附近的羊肉烤盤料理。" }
+    ]
   },
   {
     day: 2,
@@ -31,7 +35,11 @@ const itineraryData = [
       { time: "16:00", label: "購物", activity: "在 Outlet 盡情購物至 20:00 關門。" }
     ],
     accommodation: "札幌 Vessel Inn 中島公園 (續住免搬行李)",
-    photos: ["/images/day2/otaru_canal.jpg", "/images/day2/mitsui_outlet.png", "/images/day2/vessel_inn_park.jpg"]
+    photos: ["/images/day2/otaru_canal.jpg", "/images/day2/mitsui_outlet.png", "/images/day2/vessel_inn_park.jpg"],
+    recommendations: [
+      { type: "food", title: "三角市場海鮮", desc: "新鮮海鮮丼與現煮帝王蟹。" },
+      { type: "food", title: "小樽甜點", desc: "LeTAO 雙層乳酪蛋糕、六花亭。" }
+    ]
   },
   {
     day: 3,
@@ -46,7 +54,11 @@ const itineraryData = [
       { time: "17:00", label: "入住", activity: "入住 OMO7 旭川 (星野集團)。" }
     ],
     accommodation: "OMO7 旭川 (親子友善飯店)",
-    photos: ["/images/day3/asahiyama_zoo.jpg", "/images/day3/aeon_mall.png", "/images/day3/omo7_asahikawa.jpg"]
+    photos: ["/images/day3/asahiyama_zoo.jpg", "/images/day3/aeon_mall.png", "/images/day3/omo7_asahikawa.jpg"],
+    recommendations: [
+      { type: "food", title: "味噌拉麵", desc: "元祖拉麵橫丁，濃郁味噌湯頭。" },
+      { type: "spot", title: "二條市場", desc: "享用海鮮蓋飯當早餐的最佳去處。" }
+    ]
   },
   {
     day: 4,
@@ -61,7 +73,11 @@ const itineraryData = [
       { time: "19:30", label: "入住", activity: "入住新富良野王子大飯店。" }
     ],
     accommodation: "新富良野王子大飯店",
-    photos: ["/images/day4/shikisai_no_oka.jpg", "/images/day4/blue_pond.jpg", "/images/day4/tomita_farm.jpg", "/images/day4/ningle_terrace.jpg"]
+    photos: ["/images/day4/shikisai_no_oka.jpg", "/images/day4/blue_pond.jpg", "/images/day4/tomita_farm.jpg", "/images/day4/ningle_terrace.jpg"],
+    recommendations: [
+      { type: "food", title: "薰衣草冰淇淋", desc: "富田農場限定，紫色浪漫滋味。" },
+      { type: "food", title: "富良野咖哩", desc: "使用當地新鮮蔬菜烹製的濃郁咖哩。" }
+    ]
   },
   {
     day: 5,
@@ -75,7 +91,10 @@ const itineraryData = [
       { time: "18:00", label: "放電", activity: "在室內大型水樂園玩划水道，小孩絕對超嗨。" }
     ],
     accommodation: "第一瀧本館 (超強親子溫泉飯店)",
-    photos: ["/images/day5/noboribetsu_jigokudani.png", "/images/day5/oyunuma.jpg", "/images/day5/dai_ichi_takimotokan.jpg"]
+    photos: ["/images/day5/noboribetsu_jigokudani.png", "/images/day5/oyunuma.jpg", "/images/day5/dai_ichi_takimotokan.jpg"],
+    recommendations: [
+      { type: "spot", title: "大湯沼足湯", desc: "在森林中享受天然溫泉足浴。" }
+    ]
   },
   {
     day: 6,
@@ -89,7 +108,10 @@ const itineraryData = [
       { time: "20:45", label: "煙火", activity: "躺在房間看洞爺湖煙火在窗外綻放。" }
     ],
     accommodation: "乃之風渡假飯店 (每房皆有面湖大窗)",
-    photos: ["/images/day6/showa_shinzan_bear_park.jpg", "/images/day6/toyako_cruise.jpg", "/images/day6/toyako_fireworks.jpg"]
+    photos: ["/images/day6/showa_shinzan_bear_park.jpg", "/images/day6/toyako_cruise.jpg", "/images/day6/toyako_fireworks.jpg"],
+    recommendations: [
+      { type: "spot", title: "洞爺湖汽船", desc: "搭船環湖，近距離觀察美麗湖景。" }
+    ]
   },
   {
     day: 7,
@@ -104,7 +126,10 @@ const itineraryData = [
       { time: "15:00", label: "登機", activity: "辦理登機，準備帶著滿滿回憶返台。" }
     ],
     accommodation: "溫暖的家",
-    photos: ["/images/day7/new_chitose_airport.png", "/images/day7/airport_souvenirs.jpg"]
+    photos: ["/images/day7/new_chitose_airport.png", "/images/day7/airport_souvenirs.jpg"],
+    recommendations: [
+      { type: "food", title: "機場甜點補貨", desc: "六花亭、北菓樓最後大採購。" }
+    ]
   }
 ];
 
@@ -255,26 +280,30 @@ function App() {
           </div>
         </section>
 
-        <section className="mb-10 bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-[40px] border border-orange-100 shadow-sm">
+        <section className="mb-10 bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-[40px] border border-orange-100 shadow-sm relative overflow-hidden">
+          <div className="absolute -right-4 -top-4 w-24 h-24 bg-orange-200/20 rounded-full blur-2xl"></div>
           <h4 className="flex items-center gap-2 text-orange-600 font-bold text-sm mb-4">
-            <span>🌟</span> 3 大 1 小 行程貼士 (Pro Tips)
+            <span>🌟</span> 7月限定・旬の味 (July Specials)
+          </h4>
+          <div className="grid grid-cols-2 gap-3 mb-6">
+            <div className="glass-light p-3 rounded-2xl border border-orange-200/50 flex flex-col items-center text-center">
+              <span className="text-2xl mb-1">🍈</span>
+              <p className="text-[10px] font-bold text-orange-800">夕張哈密瓜</p>
+              <p className="text-[8px] text-orange-600/70">香甜多汁，夏季必嚐</p>
+            </div>
+            <div className="glass-light p-3 rounded-2xl border border-orange-200/50 flex flex-col items-center text-center">
+              <span className="text-2xl mb-1">🌽</span>
+              <p className="text-[10px] font-bold text-orange-800">北海道甜玉米</p>
+              <p className="text-[8px] text-orange-600/70">七月採收，口感極鮮</p>
+            </div>
+          </div>
+          <h4 className="flex items-center gap-2 text-orange-600 font-bold text-[10px] uppercase tracking-wider mb-3 opacity-60">
+            行程貼士 (Travel Tips)
           </h4>
           <div className="grid grid-cols-1 gap-4 text-xs text-stone-600 leading-relaxed font-serif-jp">
             <div className="bg-white/60 p-3 rounded-2xl">
-              <p className="font-bold text-orange-700 mb-1">🍈 哈密瓜盛產期</p>
-              <p>7/10 前後是富良野哈密瓜最盛產的時候，路邊農場通常比超市更便宜好食。</p>
-            </div>
-            <div className="bg-white/60 p-3 rounded-2xl">
-              <p className="font-bold text-orange-700 mb-1">🦀 螃蟹/海鮮秘訣</p>
-              <p>在小樽三角市場建議挑選活蟹現煮，味道最鮮。記得提早預約札幌的螃蟹餐廳。</p>
-            </div>
-            <div className="bg-white/60 p-3 rounded-2xl">
               <p className="font-bold text-orange-700 mb-1">🛌 房型選擇建議</p>
               <p>預訂時註明需要「Triple Room (三床房)」或「和洋室」，3 位大人才能住得舒適。</p>
-            </div>
-            <div className="bg-white/60 p-3 rounded-2xl">
-              <p className="font-bold text-orange-700 mb-1">🎆 煙火觀賞提示</p>
-              <p>洞爺湖煙火 20:45 施放。乃之風房內觀賞最愜意，泡完溫泉換上浴衣最享受。</p>
             </div>
           </div>
         </section>
@@ -348,6 +377,24 @@ function App() {
                         <div className="text-[8px] text-center font-handwriting text-stone-400 italic">Memory Snapshot</div>
                       </div>
                     ))}
+                  </div>
+
+                  <div className="mt-4 mb-8">
+                    <h5 className="text-[10px] font-bold text-purple-400 uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
+                      <span className="w-4 h-[1px] bg-purple-200"></span>
+                      夏の絶品グルメ & スポット
+                    </h5>
+                    <div className="grid grid-cols-1 gap-3">
+                      {item.recommendations.map((rec, rIdx) => (
+                        <div key={rIdx} className="glass-light p-3 rounded-2xl border border-white flex items-center gap-3">
+                          <span className="text-lg">{rec.type === 'food' ? '🍲' : '📍'}</span>
+                          <div>
+                            <p className="text-xs font-bold text-stone-700">{rec.title}</p>
+                            <p className="text-[10px] text-stone-400">{rec.desc}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="timeline-container">
