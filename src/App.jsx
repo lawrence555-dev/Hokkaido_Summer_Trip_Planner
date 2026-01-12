@@ -302,6 +302,39 @@ function App() {
           </div>
         </section>
 
+        {/* Visual Analysis (Charts) */}
+        <section className="mb-10 bg-white/50 p-6 rounded-[40px] border border-stone-200 shadow-sm relative overflow-hidden">
+          <h4 className="flex items-center gap-2 text-wa-purple font-bold text-sm mb-6">
+            <span>📊</span> 視覺化方案分析 (Visual Analysis)
+          </h4>
+          <div className="grid grid-cols-1 gap-8">
+            <div className="flex flex-col items-center">
+              <p className="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-4 text-center">行程平衡雷達圖 (Itinerary Radar)</p>
+              <div className="w-full max-w-[200px]">
+                <ComparisonRadar />
+              </div>
+              <div className="grid grid-cols-5 gap-1 mt-4 w-full">
+                {['景點', '餘裕', '購物', '效率', '預算'].map((label, idx) => (
+                  <div key={label} className="text-center">
+                    <p className="text-[10px] font-black text-stone-700 leading-none">
+                      {[95, 65, 60, 95, 85][idx]}%
+                    </p>
+                    <p className="text-[8px] text-stone-400 mt-1">{label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="h-[1px] bg-stone-100 w-full opacity-50"></div>
+            <div>
+              <p className="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-4 text-center">七月薰衣草花況預測 (Bloom Forecast)</p>
+              <div className="h-32 mb-2">
+                <BloomLine />
+              </div>
+              <p className="text-[8px] text-stone-400 text-center italic">根據 2026 年預計花期資料生成</p>
+            </div>
+          </div>
+        </section>
+
         {/* Travel Tips (Logistics only) */}
         <section className="mb-10 bg-white/50 p-6 rounded-[40px] border border-stone-200 shadow-sm">
           <h4 className="flex items-center gap-2 text-stone-400 font-bold text-[10px] uppercase tracking-wider mb-4">
