@@ -116,19 +116,21 @@ const itineraryData = [
   {
     day: 7,
     date: "07/13 Mon.",
-    title: "機場最後巡禮與返台",
-    focus: "還車、補貨、伴手禮",
+    title: "新千歲空港巡禮：最後的採買與歸途",
+    focus: "OTS 還車、玉米麵包、JAL 國內線",
     timeline: [
-      { time: "08:45", label: "出發", activity: "準時退房，開往 OTS 千歲營業所（約 1.25 小時）。" },
-      { time: "10:00", label: "還車", activity: "附近加油站加滿油後，完成 OTS 還車。" },
-      { time: "11:00", label: "逛街", activity: "機場 2 樓買六花亭、北菓樓等螃蟹名產補貨。", highlight: true },
-      { time: "12:00", label: "親子", activity: "機場 3 樓哆啦 A 夢與 Hello Kitty 樂園。" },
-      { time: "15:00", label: "登機", activity: "辦理登機，準備帶著滿滿回憶返台。" }
+      { time: "08:30", label: "出發", activity: "乃之風退房，前往千歲市區。若想買限量玉米麵包建議此時抵達。" },
+      { time: "09:15", label: "加油", activity: "於 OTS 營業所附近加油站加滿油。" },
+      { time: "09:30", label: "還車", activity: "抵達 OTS 千歲營業所辦理還車手續。", highlight: true },
+      { time: "09:45", label: "接駁", activity: "搭乘 OTS 免費接駁車前往機場國內線航廈。" },
+      { time: "10:15", label: "報到", activity: "抵達國內線航廈，辦理行李托運與報到。" },
+      { time: "11:45", label: "飛行", activity: "搭乘 JL508 班機前往羽田機場。再見，北海道！", highlight: true }
     ],
-    accommodation: "溫暖的家",
+    accommodation: "東京羽田/溫暖的家",
     photos: ["/images/day7/new_chitose_airport.png", "/images/day7/airport_souvenirs.jpg"],
     recommendations: [
-      { type: "food", title: "機場甜點補貨", desc: "六花亭、北菓樓最後大採購。" }
+      { type: "food", title: "美瑛之丘玉米麵包", desc: "新千歲機場排隊名店，建議早點還車去排隊。" },
+      { type: "spot", title: "新千歲伴手禮區", desc: "Royce'、六花亭、北菓樓最後掃貨。" }
     ]
   }
 ];
@@ -356,7 +358,11 @@ function App() {
 
             {currentItinerary.filter(d => d.day === selectedDay).map((item) => (
               <div key={item.day} className="wa-card p-8 pb-0">
-                <div className="washi-tape"></div>
+                <div className="washi-tape flex items-center justify-around px-2 text-[10px] select-none">
+                  <span>🪻</span>
+                  <span>🍈</span>
+                  <span>🪻</span>
+                </div>
                 <div className="flex justify-between items-start mb-6 relative">
                   <div className="absolute -left-2 top-0 writing-vertical-rl text-xs font-serif-jp text-stone-300 tracking-widest opacity-60">
                     第{item.day}日
