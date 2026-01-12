@@ -303,34 +303,37 @@ function App() {
         </section>
 
         {/* Visual Analysis (Charts) */}
-        <section className="mb-10 bg-white/50 p-6 rounded-[40px] border border-stone-200 shadow-sm relative overflow-hidden">
-          <h4 className="flex items-center gap-2 text-wa-purple font-bold text-sm mb-6">
+        <section className="mb-10 bg-white/50 p-8 rounded-[40px] border border-stone-100 shadow-sm relative overflow-hidden">
+          <h4 className="flex items-center gap-2 text-wa-purple font-bold text-sm mb-8">
             <span>📊</span> 視覺化方案分析 (Visual Analysis)
           </h4>
-          <div className="grid grid-cols-1 gap-8">
+          <div className="flex flex-col gap-12">
             <div className="flex flex-col items-center">
-              <p className="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-4 text-center">行程平衡雷達圖 (Itinerary Radar)</p>
-              <div className="w-full max-w-[200px]">
+              <p className="text-[10px] font-bold text-stone-300 uppercase tracking-[0.2em] mb-8 text-center">行程平衡雷達圖 (Itinerary Radar)</p>
+              <div className="w-full max-w-[260px] relative">
                 <ComparisonRadar />
               </div>
-              <div className="grid grid-cols-5 gap-1 mt-4 w-full">
+
+              <div className="grid grid-cols-5 gap-0 mt-10 w-full bg-white/30 rounded-2xl p-4 border border-white/50 max-w-[260px]">
                 {['景點', '餘裕', '購物', '效率', '預算'].map((label, idx) => (
-                  <div key={label} className="text-center">
+                  <div key={label} className="text-center border-r last:border-r-0 border-stone-100">
                     <p className="text-[10px] font-black text-stone-700 leading-none">
                       {[95, 65, 60, 95, 85][idx]}%
                     </p>
-                    <p className="text-[8px] text-stone-400 mt-1">{label}</p>
+                    <p className="text-[8px] text-stone-400 mt-1.5 font-bold">{label}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="h-[1px] bg-stone-100 w-full opacity-50"></div>
-            <div>
-              <p className="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-4 text-center">七月薰衣草花況預測 (Bloom Forecast)</p>
-              <div className="h-32 mb-2">
+
+            <div className="h-[1px] bg-gradient-to-r from-transparent via-stone-100 to-transparent w-full"></div>
+
+            <div className="flex flex-col items-center px-2">
+              <p className="text-[10px] font-bold text-stone-300 uppercase tracking-[0.2em] mb-8 text-center">七月薰衣草花況預測 (Bloom Forecast)</p>
+              <div className="w-full max-w-[260px] h-32 mb-4">
                 <BloomLine />
               </div>
-              <p className="text-[8px] text-stone-400 text-center italic">根據 2026 年預計花期資料生成</p>
+              <p className="text-[8px] text-stone-400 text-center italic opacity-60">根據 2026 年預計花期資料生成</p>
             </div>
           </div>
         </section>

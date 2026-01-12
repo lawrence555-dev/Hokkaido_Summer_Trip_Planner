@@ -45,7 +45,11 @@ export const ComparisonRadar = () => {
         scales: {
             r: {
                 grid: { color: '#f0f0f0' },
-                pointLabels: { font: { size: 10 }, color: '#aaa' },
+                pointLabels: {
+                    font: { size: 10, weight: 'bold' },
+                    color: '#999',
+                    padding: 15
+                },
                 ticks: { display: false },
                 suggestedMin: 0,
                 suggestedMax: 100
@@ -62,11 +66,13 @@ export const BloomLine = () => {
         datasets: [{
             data: [20, 65, 95, 75],
             borderColor: '#826a9d',
-            tension: 0.4,
-            fill: false,
-            pointRadius: 4,
+            backgroundColor: 'rgba(130, 106, 157, 0.05)',
+            tension: 0.45,
+            fill: true,
+            pointRadius: 5,
             pointBackgroundColor: 'white',
-            borderWidth: 2
+            pointBorderWidth: 2,
+            borderWidth: 3
         }]
     };
 

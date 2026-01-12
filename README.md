@@ -32,7 +32,7 @@
 - **前端**: React 19 + Vite 5
 - **樣式**: Tailwind CSS v3
 - **圖表**: Chart.js (`react-chartjs-2`)
-- **佈署**: Zeabur (自動 CI/CD)
+- **佈署**: Render (自動 CI/CD)
 
 ## 🚀 快速開始
 
