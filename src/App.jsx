@@ -51,9 +51,9 @@ const itineraryData = [
       { time: "09:00", label: "美食", activity: "品嚐最新鮮的干貝、海膽、現烤海鮮。", highlight: true },
       { time: "11:00", label: "自駕", activity: "開往旭山動物園（約 2 小時）。" },
       { time: "13:00", label: "親子", activity: "逛旭山動物園，看北極熊、企鵝和海豹。" },
-      { time: "17:00", label: "入住", activity: "入住 OMO7 旭川 (星野集團)。" }
+      { time: "17:00", label: "入住", activity: "入住 旭川HOTEL AMANEK。" }
     ],
-    accommodation: "OMO7 旭川 (親子友善飯店)",
+    accommodation: "旭川HOTEL AMANEK",
     photos: ["/images/day3/asahiyama_zoo.jpg", "/images/day3/aeon_mall.png", "/images/day3/omo7_asahikawa.jpg"],
     recommendations: [
       { type: "food", title: "味噌拉麵", desc: "元祖拉麵橫丁，濃郁味噌湯頭。" },
