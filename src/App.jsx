@@ -15,7 +15,7 @@ const itineraryData = [
       { time: "19:00", label: "美食", activity: "步行至薄野區吃「帝王蟹/螃蟹料理」。推薦「冰雪之門」或「螃蟹家」。", highlight: true },
       { time: "20:30", label: "購物", activity: "逛狸小路商店街 1~7 段，補齊藥妝與唐吉訶德雜貨。" }
     ],
-    accommodation: "札幌 Vessel Inn 中島公園 (海鮮早餐極強)",
+    accommodation: "札幌萬怡酒店(Courtyard by Marriott Sapporo)",
     photos: ["/images/day1/ots_rental.png", "/images/day1/tanukikoji.jpg", "/images/day1/soup_curry.jpg"],
     recommendations: [
       { type: "food", title: "湯咖哩 (Soup Curry)", desc: "札幌靈魂食物，推薦 Tenjiku 或 Samurai。" },
@@ -34,7 +34,7 @@ const itineraryData = [
       { time: "15:00", label: "出發", activity: "離開小樽開往「三井 Outlet Park 札幌北廣島」。" },
       { time: "16:00", label: "購物", activity: "在 Outlet 盡情購物至 20:00 關門。" }
     ],
-    accommodation: "札幌 Vessel Inn 中島公園 (續住免搬行李)",
+    accommodation: "札幌萬怡酒店(Courtyard by Marriott Sapporo)",
     photos: ["/images/day2/otaru_canal.jpg", "/images/day2/mitsui_outlet.png", "/images/day2/vessel_inn_park.jpg"],
     recommendations: [
       { type: "food", title: "三角市場海鮮", desc: "新鮮海鮮丼與現煮帝王蟹。" },
