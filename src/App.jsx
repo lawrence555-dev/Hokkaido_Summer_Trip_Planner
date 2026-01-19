@@ -79,7 +79,8 @@ const itineraryData = [
     recommendations: [
       { type: "food", title: "味噌拉麵", desc: "元祖拉麵橫丁，濃郁味噌湯頭。" },
       { type: "spot", title: "二條市場", desc: "享用海鮮蓋飯當早餐的最佳去處。" }
-    ]
+    ],
+    transportAdvice: "這段路程約 2 小時，沿路景觀優美。建議在休息站稍作停留，品嚐季節鮮乳。"
   },
   {
     day: 4,
@@ -115,7 +116,8 @@ const itineraryData = [
     photos: ["/images/day5/noboribetsu_jigokudani.png", "/images/day5/oyunuma.jpg", "/images/day5/dai_ichi_takimotokan.jpg"],
     recommendations: [
       { type: "spot", title: "大湯沼足湯", desc: "在森林中享受天然溫泉足浴。" }
-    ]
+    ],
+    transportAdvice: "這段路程約 2.5 小時，沿路景觀優美。建議在休息站稍作停留，品嚐當地哈密瓜。"
   },
   {
     day: 6,
@@ -681,14 +683,16 @@ const MagazineView = ({ selectedDay, setSelectedDay, weather, exchangeRate, curr
                   </div>
                 </div>
 
-                {/* Logistics Info (Quick view) */}
-                <div className="bg-gradient-to-br from-wa-cyan/90 to-cyan-600 p-8 rounded-[2.5rem] text-white shadow-2xl shadow-wa-cyan/20 border border-white/20">
-                  <Car className="w-8 h-8 mb-5 opacity-80" />
-                  <h5 className="legible-caps !text-white !opacity-60 mb-3">Transport Advice</h5>
-                  <p className="text-sm md:text-base leading-relaxed font-serif-jp tracking-tight">
-                    "這段路程約 2.5 小時，沿路景觀優美。建議在休息站稍作停留，品嚐當地哈密瓜。"
-                  </p>
-                </div>
+                {/* Logistics Info (Quick view) - Only show if transportAdvice exists */}
+                {item.transportAdvice && (
+                  <div className="bg-gradient-to-br from-wa-ink to-[#1a365d] p-8 rounded-[2.5rem] text-white shadow-2xl shadow-wa-ink/20 border border-white/10">
+                    <Car className="w-8 h-8 mb-6 text-wa-pink" />
+                    <h5 className="legible-caps !text-white !opacity-60 mb-3">Transport Advice</h5>
+                    <p className="text-base md:text-lg leading-relaxed font-serif-jp tracking-tight font-bold">
+                      "{item.transportAdvice}"
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           ))}
