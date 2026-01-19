@@ -190,8 +190,8 @@ function App() {
               key={item.day}
               onClick={() => setSelectedDay(item.day)}
               className={`flex items-center gap-4 p-4 rounded-3xl transition-all duration-300 group ${selectedDay === item.day
-                  ? 'bg-wa-pink text-white shadow-xl scale-[1.02]'
-                  : 'bg-white/40 text-pink-400 hover:bg-white/60'
+                ? 'bg-wa-pink text-white shadow-xl scale-[1.02]'
+                : 'bg-white/40 text-pink-400 hover:bg-white/60'
                 }`}
             >
               <span className="text-lg font-black opacity-30">0{item.day}</span>
@@ -415,12 +415,12 @@ function App() {
 
         {/* 3. MOBILE/IPAD BOTTOM DOCK */}
         <nav className="fixed bottom-6 left-6 right-6 h-18 bg-white/20 backdrop-blur-3xl border border-white/40 rounded-[2.5rem] shadow-2xl z-[100] flex justify-around items-center lg:hidden transition-transform">
-          {[{ icon: MapPin, l: 'Plan' }, { icon: Camera, l: 'Photos' }, { icon: Sparkles, l: 'Highlights' }, { icon: Utensils, l: 'Local' }].map((btn, i) => (
+          {[{ icon: MapPin, l: 'Plan' }, { icon: Camera, l: 'Photos' }, { icon: Sparkles, l: 'Highlights' }, { icon: Utensils, l: 'Local' }].map(({ icon: Icon, l }, i) => (
             <button key={i} className="flex flex-col items-center gap-1 group">
               <div className="p-2 rounded-2xl group-active:bg-pink-100 group-active:text-wa-pink transition-colors">
-                <btn.icon className="w-6 h-6 text-pink-300" />
+                <Icon className="w-6 h-6 text-pink-300" />
               </div>
-              <span className="text-[8px] font-black uppercase text-pink-300">{btn.l}</span>
+              <span className="text-[8px] font-black uppercase text-pink-300">{l}</span>
             </button>
           ))}
         </nav>
@@ -428,3 +428,5 @@ function App() {
     </div>
   );
 }
+
+export default App;
