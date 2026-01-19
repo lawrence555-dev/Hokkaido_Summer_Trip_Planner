@@ -177,8 +177,8 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-transparent selection:bg-pink-100 flex flex-col lg:flex-row font-sans-editorial">
-      {/* 1. PC SIDEBAR (Desktop Masthead) */}
+    <div className="min-h-screen bg-transparent selection:bg-pink-100 flex flex-col lg:flex-row font-sans-editorial text-wa-ink">
+      {/* 1. PC SIDEBAR (Desktop Only) */}
       <aside className="hidden lg:flex fixed left-0 top-0 h-full w-80 bg-white/10 backdrop-blur-3xl border-r border-white/30 z-50 flex-col p-10 transition-all overflow-hidden">
         <div className="absolute -right-20 top-20 writing-vertical-magazine text-[120px] font-black text-wa-pink/5 select-none pointer-events-none">
           HOKKAIDO
@@ -219,9 +219,9 @@ function App() {
       </aside>
 
       {/* 2. MAIN CONTENT AREA */}
-      <main className="flex-1 lg:ml-80 min-h-screen flex flex-col items-center">
-        {/* Editorial Navbar */}
-        <nav className="w-full px-8 py-10 flex justify-between items-end max-w-[1400px] border-b border-wa-ink/5 mb-10">
+      <main className="flex-1 lg:ml-80 min-h-screen flex flex-col items-center overflow-x-hidden">
+        {/* Responsive Navbar (Editorial Style for PC/Tablet) */}
+        <nav className="w-full px-8 py-10 hidden md:flex justify-between items-end max-w-[1400px] border-b border-wa-ink/5 mb-10">
           <div className="space-y-1">
             <p className="text-[10px] font-black tracking-[0.5em] text-wa-pink uppercase">Issue No. 01 — Hokkaido</p>
             <h1 className="editorial-title text-2xl text-wa-ink">SEASONAL DISCOVERY</h1>
@@ -238,39 +238,170 @@ function App() {
           </div>
         </nav>
 
-        <div className="w-full max-w-[1400px] px-8 pb-32">
+        {/* --- MOBILE ONLY: ORIGINAL SECTIONS --- */}
+        <div className="w-full max-w-5xl px-6 pt-12 pb-32 flex flex-col gap-10 md:hidden">
+          {/* Mobile Header */}
+          <section className="text-center relative py-6">
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-white/40 backdrop-blur-xl rounded-[2.5rem] border border-white/60 shadow-2xl">
+                <Sparkles className="w-10 h-10 text-wa-pink" />
+              </div>
+            </div>
+            <h1 className="text-4xl font-serif-jp font-black text-wa-ink mb-2">北海道 夏日親子自駕</h1>
+            <p className="text-sm font-handwriting text-pink-400 italic">2026年、夏。和家人一起的北國冒險。</p>
+          </section>
+
+          {/* Mobile Quick Stats */}
+          <section className="grid grid-cols-3 gap-3">
+            <div className="bg-white/40 p-4 rounded-3xl border border-white/60 flex flex-col items-center gap-1 shadow-sm">
+              <Clock className="w-4 h-4 text-wa-pink" />
+              <p className="text-xs font-black">{weather.temp}°C</p>
+              <p className="text-[8px] font-black text-wa-pink/40 uppercase">SAPPORO</p>
+            </div>
+            <div className="bg-white/40 p-4 rounded-3xl border border-white/60 flex flex-col items-center gap-1 shadow-sm">
+              <Info className="w-4 h-4 text-wa-cyan" />
+              <p className="text-xs font-black">1:{exchangeRate}</p>
+              <p className="text-[8px] font-black text-wa-cyan/40 uppercase">JPY/TWD</p>
+            </div>
+            <div className="bg-white/40 p-4 rounded-3xl border border-white/60 flex flex-col items-center gap-1 shadow-sm">
+              <span className="text-sm">🌸</span>
+              <p className="text-xs font-black text-orange-600">滿開</p>
+              <p className="text-[8px] font-black text-orange-600/40 uppercase">BLOOM</p>
+            </div>
+          </section>
+
+          {/* Mobile Logistics */}
+          <div className="grid grid-cols-1 gap-4">
+            <section className="wa-card p-6 shadow-xl border-dashed border-wa-pink/20 relative bg-white/60">
+              <h4 className="flex items-center gap-2 text-wa-ink font-bold text-sm mb-4"><Calendar className="w-4 h-4 text-wa-cyan" /> 交通與規劃</h4>
+              <div className="space-y-2">
+                <div className="flex justify-between items-center text-[10px] font-black">
+                  <span className="text-wa-ink/40 uppercase tracking-widest">Flight JX850</span>
+                  <span className="text-wa-cyan">10:05 TPE → 15:10 CTS</span>
+                </div>
+                <div className="flex justify-between items-center text-[10px] font-black">
+                  <span className="text-wa-ink/40 uppercase tracking-widest">Rental OTS</span>
+                  <span className="text-wa-pink">NOAH/VOXY 7-SEAT</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          {/* Mobile Day Selector (Horizontal) */}
+          <section className="mt-4">
+            <div className="flex overflow-x-auto gap-4 pb-4 no-scrollbar -mx-6 px-6 snap-x">
+              {currentItinerary.map((item) => (
+                <button
+                  key={item.day}
+                  onClick={() => setSelectedDay(item.day)}
+                  className={`snap-center shrink-0 flex flex-col items-center justify-center w-[80px] h-[100px] rounded-[32px] border-2 transition-all duration-300 ${selectedDay === item.day
+                    ? 'bg-wa-pink text-white border-wa-pink shadow-xl -translate-y-2'
+                    : 'bg-white/50 text-wa-pink/40 border-white/80'
+                    }`}
+                >
+                  <span className="text-[8px] font-bold opacity-60">DAY</span>
+                  <span className="text-2xl font-black">{item.day}</span>
+                  <span className="text-[8px] font-bold mt-1 opacity-60 uppercase">{item.date.split(' ')[0]}</span>
+                </button>
+              ))}
+            </div>
+          </section>
+
+          {/* Mobile Detail Card (Original Style) */}
+          {currentItinerary.filter(d => d.day === selectedDay).map((item) => (
+            <section key={item.day} className="wa-card p-0 shadow-2xl relative overflow-visible border-white/80 bg-white/40">
+              {/* Washi Tape */}
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-6 bg-wa-pink/20 backdrop-blur-md border border-white/40 rotate-1 flex items-center justify-around px-4 z-[60] shadow-sm">
+                <span className="text-[8px]">🌸</span><span className="text-[8px]">🍈</span><span className="text-[8px]">🌸</span>
+              </div>
+
+              <div className="p-6 space-y-6">
+                <div className="flex justify-between items-center border-b border-wa-pink/10 pb-4">
+                  <div className="w-14 h-14 rounded-2xl bg-wa-ink text-white flex flex-col items-center justify-center shadow-lg -rotate-2 border-2 border-white/20">
+                    <span className="text-[8px] font-black opacity-60">D0{item.day}</span>
+                    <span className="text-xl font-black italic">{item.date.split('/')[1].split(' ')[0]}</span>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-[10px] font-black text-wa-pink uppercase tracking-widest mb-1">{item.focus.split('、')[0]}</p>
+                    <p className="text-base font-black text-wa-ink leading-tight max-w-[180px]">{item.title}</p>
+                  </div>
+                </div>
+
+                {/* Horizontal Photo Strip */}
+                <div className="flex gap-4 overflow-x-auto pb-4 snap-x no-scrollbar -mx-2">
+                  {item.photos.map((photo, pIdx) => (
+                    <div key={pIdx} className="snap-center shrink-0 w-44 h-56 bg-white p-3 shadow-xl border border-stone-100 rotate-1 hover:rotate-0 transition-transform">
+                      <img src={photo} alt="" className="w-full h-full object-cover rounded-sm grayscale-[0.1]" />
+                      <p className="text-[8px] font-handwriting mt-2 text-stone-400 text-center">Memory #{selectedDay}-{pIdx + 1}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Vertical Timeline (Original Style) */}
+                <div className="relative pl-6 py-2">
+                  <div className="absolute left-[7px] top-0 bottom-0 w-[1.5px] bg-wa-pink/10"></div>
+                  <div className="space-y-8">
+                    {item.timeline.map((event, eIdx) => (
+                      <div key={eIdx} className={`relative flex gap-4 ${event.highlight ? 'scale-105 origin-left' : ''}`}>
+                        <div className={`absolute -left-[23px] top-1.5 w-3 h-3 rounded-full border-2 bg-white z-10 ${event.highlight ? 'border-wa-cyan' : 'border-wa-pink'}`}></div>
+                        <span className="text-[10px] font-black text-wa-pink/40 w-10 pt-0.5">{event.time}</span>
+                        <div className="flex-1">
+                          <p className={`text-[11px] font-black uppercase tracking-tighter ${event.highlight ? 'text-wa-cyan' : 'text-wa-pink/60'}`}>{event.label}</p>
+                          <p className="text-sm font-serif-jp text-wa-ink leading-snug font-bold">{event.activity}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Accommodation info */}
+                <div className="bg-wa-ink/5 p-5 rounded-[2rem] border border-white flex items-start gap-4 shadow-inner">
+                  <div className="p-3 bg-white rounded-2xl shadow-sm"><Hotel className="w-5 h-5 text-wa-pink" /></div>
+                  <div>
+                    <p className="text-[10px] font-black text-wa-ink/40 uppercase tracking-widest mb-1">Stay / Night</p>
+                    <p className="text-sm font-black text-wa-ink font-serif-jp leading-tight">{item.accommodation}</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          ))}
+        </div>
+
+        {/* --- TABLET/PC ONLY: MAGAZINE SECTIONS --- */}
+        <div className="hidden md:block w-full max-w-[1400px] px-8 pb-32">
           {/* Cover Section (Magazine Spread Style) */}
           <section className="mb-24">
             <div className="magazine-grid">
               <div className="col-span-12 lg:col-span-9 relative group">
                 <div className="absolute -top-6 -left-6 writing-vertical-magazine text-[10px] font-black tracking-[0.8em] text-wa-pink/30 uppercase hidden xl:block">EXPLORATION GUIDE</div>
-                <div className="aspect-[21/9] overflow-hidden rounded-[2rem] shadow-2xl relative">
+                <div className="aspect-[21/9] overflow-hidden rounded-[2.5rem] shadow-2xl relative">
                   <img
-                    src="https://images.unsplash.com/photo-1542640244-7e672d6cef21?auto=format&fit=crop&q=80&w=2070"
-                    alt="Hokkaido Cover"
-                    className="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-1000"
+                    src="https://images.unsplash.com/photo-1550850839-8dc0c480d530?auto=format&fit=crop&q=80&w=2071"
+                    alt="Hokkaido Summer"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-wa-ink/60 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-10 left-10 text-white">
-                    <p className="text-[10px] font-black tracking-[0.5em] opacity-80 mb-2">SUMMER 2026</p>
-                    <h2 className="editorial-title text-6xl">北海道 · 夏。</h2>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-wa-ink/80 via-wa-ink/20 to-transparent"></div>
+                  <div className="absolute bottom-12 left-12 text-white drop-shadow-2xl">
+                    <div className="w-12 h-1 bg-wa-cyan mb-6"></div>
+                    <p className="text-[12px] font-black tracking-[0.6em] opacity-90 mb-4 uppercase">SUMMER 2026</p>
+                    <h2 className="editorial-title text-7xl md:text-8xl leading-none">北海道 · 夏。</h2>
                   </div>
                 </div>
               </div>
-              <div className="col-span-12 lg:col-span-3 flex flex-col justify-end gap-8 pb-4">
-                <div className="space-y-4 border-l-2 border-wa-pink pl-6">
-                  <p className="text-[10px] font-black text-wa-pink uppercase tracking-widest">Introduction</p>
-                  <p className="text-sm font-serif-jp text-wa-ink leading-relaxed italic">
-                    "在薰衣草盛開的季節，展開一段關於味蕾與風景的冒險。親子、自駕、煙火，這是屬於我們的北國盛夏。"
+              <div className="col-span-12 lg:col-span-3 flex flex-col justify-end gap-10 pb-6 lg:pl-4">
+                <div className="space-y-6 border-l-4 border-wa-pink pl-8">
+                  <p className="text-[11px] font-black text-wa-pink uppercase tracking-widest">Introduction</p>
+                  <p className="text-lg font-serif-jp text-wa-ink leading-relaxed italic font-bold">
+                    「在薰衣草盛開的海，<br />找尋北國最溫柔的風。」
                   </p>
                 </div>
-                <div className="bg-wa-pink/5 p-6 rounded-3xl border border-wa-pink/10">
-                  <p className="text-[10px] font-black text-wa-pink mb-3 uppercase">Bloom Alert</p>
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">🌸</span>
+                <div className="bg-wa-pink/5 hover:bg-wa-pink/10 transition-colors p-8 rounded-[2.5rem] border border-wa-pink/10 shadow-sm group cursor-pointer">
+                  <p className="text-[10px] font-black text-wa-pink mb-4 uppercase tracking-[0.2em]">Bloom Alert</p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-2xl shadow-sm rotate-3 group-hover:rotate-0 transition-transform">🌸</div>
                     <div>
-                      <p className="text-xs font-black text-wa-ink">富良野薰衣草</p>
-                      <p className="text-[10px] text-wa-pink font-bold">滿開中 (Peek Stage)</p>
+                      <p className="text-sm font-black text-wa-ink">富良野・薰衣草</p>
+                      <p className="text-[10px] text-wa-pink font-bold">盛開期 Full Bloom</p>
                     </div>
                   </div>
                 </div>
@@ -369,8 +500,8 @@ function App() {
           ))}
         </div>
 
-        {/* 3. MOBILE/IPAD BOTTOM DOCK (Unified for non-PC) */}
-        <nav className="fixed bottom-6 left-6 right-6 h-20 bg-white/10 backdrop-blur-3xl border border-white/30 rounded-[2.5rem] shadow-2xl z-[100] flex justify-around items-center lg:hidden transition-transform">
+        {/* --- COMMON: BOTTOM DOCK (Mobile/Tablet Only) --- */}
+        <nav className="fixed bottom-6 left-6 right-6 h-20 bg-white/40 backdrop-blur-3xl border border-white/60 rounded-[2.5rem] shadow-2xl z-[100] flex justify-around items-center lg:hidden">
           {[{ icon: MapPin, l: 'Plan' }, { icon: Camera, l: 'Photos' }, { icon: Sparkles, l: 'Highlights' }, { icon: Utensils, l: 'Local' }].map(({ icon: Icon, l }, i) => (
             <button key={i} className="flex flex-col items-center gap-1 group relative">
               <div className="p-3 rounded-2xl group-active:bg-wa-pink/20 transition-all">
