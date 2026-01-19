@@ -238,9 +238,9 @@ function App() {
           </div>
         </nav>
 
-        {/* --- MOBILE ONLY: ORIGINAL SECTIONS --- */}
+        {/* --- MOBILE ONLY: ORIGINAL SECTIONS (RESTORED FROM STABLE) --- */}
         <div className="w-full max-w-5xl px-6 pt-12 pb-32 flex flex-col gap-10 md:hidden">
-          {/* Mobile Header */}
+          {/* Mobile Header (Yesterday Style) */}
           <section className="text-center relative py-6">
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-white/40 backdrop-blur-xl rounded-[2.5rem] border border-white/60 shadow-2xl">
@@ -270,22 +270,123 @@ function App() {
             </div>
           </section>
 
-          {/* Mobile Logistics */}
-          <div className="grid grid-cols-1 gap-4">
-            <section className="wa-card p-6 shadow-xl border-dashed border-wa-pink/20 relative bg-white/60">
-              <h4 className="flex items-center gap-2 text-wa-ink font-bold text-sm mb-4"><Calendar className="w-4 h-4 text-wa-cyan" /> 交通與規劃</h4>
-              <div className="space-y-2">
-                <div className="flex justify-between items-center text-[10px] font-black">
-                  <span className="text-wa-ink/40 uppercase tracking-widest">Flight JX850</span>
-                  <span className="text-wa-cyan">10:05 TPE → 15:10 CTS</span>
+          {/* Restored Flight Logistics Section with Logos */}
+          <section className="bg-white/60 p-6 rounded-[40px] border border-white/80 shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 bg-stone-800 text-white text-[10px] px-3 py-1 font-bold rounded-bl-lg">
+              FLIGHT LOGISTICS
+            </div>
+            <h4 className="flex items-center gap-2 text-stone-800 font-bold text-sm mb-6">
+              <span>✈️</span> 航班資訊 (Flight Details)
+            </h4>
+            <div className="space-y-6">
+              <div className="flex items-center gap-4 bg-white/40 p-3 rounded-2xl border border-white/60">
+                <div className="w-12 h-12 shrink-0 bg-white rounded-xl p-1 shadow-sm overflow-hidden flex items-center justify-center">
+                  <img src="/images/airlines/starlux_logo.png" alt="Starlux" className="w-full h-full object-contain scale-110" />
                 </div>
-                <div className="flex justify-between items-center text-[10px] font-black">
-                  <span className="text-wa-ink/40 uppercase tracking-widest">Rental OTS</span>
-                  <span className="text-wa-pink">NOAH/VOXY 7-SEAT</span>
+                <div className="flex-1">
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-[10px] font-bold text-stone-400">去程 | 07/07 Tue.</span>
+                    <span className="text-[10px] font-black text-wa-pink bg-pink-50 px-2 py-0.5 rounded">JX850</span>
+                  </div>
+                  <div className="flex justify-between items-end">
+                    <div>
+                      <p className="text-lg font-black text-stone-700 leading-none">10:05</p>
+                      <p className="text-[8px] font-bold text-stone-400 mt-1">桃機 TPE (T1)</p>
+                    </div>
+                    <div className="flex-1 flex flex-col items-center px-4 mb-2">
+                      <div className="w-full h-[1px] bg-stone-200 relative mb-1">
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10px] text-stone-300">✈️</div>
+                      </div>
+                      <span className="text-[8px] text-stone-300 font-mono italic">A330-900neo</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-lg font-black text-stone-700 leading-none">15:10</p>
+                      <p className="text-[8px] font-bold text-stone-400 mt-1">新千歲 CTS</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </section>
-          </div>
+
+              <div className="flex items-center gap-4 bg-white/40 p-3 rounded-2xl border border-white/60">
+                <div className="w-12 h-12 shrink-0 bg-white rounded-xl p-1 shadow-sm overflow-hidden flex items-center justify-center">
+                  <img src="/images/airlines/jal_logo.png" alt="JAL" className="w-full h-full object-contain" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-[10px] font-bold text-stone-400">回程 | 07/13 Mon.</span>
+                    <span className="text-[10px] font-black text-red-500 bg-red-50 px-2 py-0.5 rounded">JL508</span>
+                  </div>
+                  <div className="flex justify-between items-end">
+                    <div>
+                      <p className="text-lg font-black text-stone-700 leading-none">11:45</p>
+                      <p className="text-[8px] font-bold text-stone-400 mt-1">新千歲 (國內線D)</p>
+                    </div>
+                    <div className="flex-1 flex flex-col items-center px-4 mb-2">
+                      <div className="w-full h-[1px] bg-stone-200 relative mb-1">
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10px] text-stone-300 rotate-180">✈️</div>
+                      </div>
+                      <span className="text-[8px] text-stone-300 font-mono italic">A350 廣體機</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-lg font-black text-stone-700 leading-none">13:25</p>
+                      <p className="text-[8px] font-bold text-stone-400 mt-1">羽田 HND (T1)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Resored Visual Analysis Charts (Yesterday's version) */}
+          <section className="bg-white/50 p-8 rounded-[40px] border border-stone-100 shadow-sm relative overflow-hidden">
+            <h4 className="flex items-center gap-2 text-wa-pink font-bold text-sm mb-8">
+              <span>📊</span> 視覺化方案分析 (Visual Analysis)
+            </h4>
+            <div className="flex flex-col gap-12">
+              <div className="flex flex-col items-center">
+                <p className="text-[10px] font-bold text-stone-300 uppercase tracking-[0.2em] mb-8 text-center">行程平衡雷達圖 (Itinerary Radar)</p>
+                <div className="w-full max-w-[260px] relative">
+                  <ComparisonRadar />
+                </div>
+                <div className="grid grid-cols-5 gap-0 mt-10 w-full bg-white/30 rounded-2xl p-4 border border-white/50 max-w-[260px]">
+                  {['景點', '餘裕', '購物', '效率', '預算'].map((label, idx) => (
+                    <div key={label} className="text-center border-r last:border-r-0 border-stone-100">
+                      <p className="text-[10px] font-black text-stone-700 leading-none">
+                        {[95, 65, 60, 95, 85][idx]}%
+                      </p>
+                      <p className="text-[8px] text-stone-400 mt-1.5 font-bold">{label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="h-[1px] bg-gradient-to-r from-transparent via-stone-100 to-transparent w-full"></div>
+              <div className="flex flex-col items-center px-2">
+                <p className="text-[10px] font-bold text-stone-300 uppercase tracking-[0.2em] mb-8 text-center">七月薰衣草花況預測 (Bloom Forecast)</p>
+                <div className="w-full max-w-[260px] h-32 mb-4">
+                  <BloomLine />
+                </div>
+                <p className="text-[8px] text-stone-400 text-center italic opacity-60">根據 2026 年預計花期資料生成</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Resored Rental Tips (Yesterday's version) */}
+          <section className="bg-wa-pink/5 p-6 rounded-[2.5rem] border border-wa-pink/10 shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 bg-wa-pink text-white text-[10px] px-3 py-1 font-bold rounded-bl-lg">
+              PRE-TRIP ADVICE
+            </div>
+            <h4 className="flex items-center gap-2 text-wa-pink font-bold text-sm mb-4">
+              <span>🚗</span> 租車與用車建議 (Rental Tips)
+            </h4>
+            <div className="space-y-4 text-xs text-stone-600 leading-relaxed font-serif-jp">
+              <p>
+                <strong>建議車型：</strong> 務必預約 <span className="text-wa-pink font-bold">7 人座</span> (如 Toyota Noah 或 Voxy)。3 大 1 小加上 4 件大行李與推車，5 人座休旅車絕對塞不下。
+              </p>
+              <p>
+                <strong>必備配件：</strong> 領車時務必加購 <span className="text-wa-pink font-bold">HEP (Hokkaido Expressway Pass)</span>，全包高速公路路費最划算。
+              </p>
+            </div>
+          </section>
 
           {/* Mobile Day Selector (Horizontal) */}
           <section className="mt-4">
@@ -389,6 +490,32 @@ function App() {
                 </div>
               </div>
               <div className="col-span-12 lg:col-span-3 flex flex-col justify-end gap-10 pb-6 lg:pl-4">
+                {/* [NEW] PC Logistics & Flight Log */}
+                <div className="bg-wa-ink/5 p-8 rounded-[2.5rem] border border-wa-ink/5 relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 bg-wa-ink text-white text-[8px] px-3 py-1 font-black uppercase tracking-widest">Logistics</div>
+                  <h4 className="text-[10px] font-black text-wa-pink uppercase tracking-widest mb-6">Flight Status</h4>
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 bg-white rounded-xl p-1 shadow-sm flex items-center justify-center">
+                        <img src="/images/airlines/starlux_logo.png" className="w-full h-full object-contain" />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-black text-wa-ink leading-none">JX850 — TPE/CTS</p>
+                        <p className="text-[8px] font-bold text-gray-400 mt-1">10:05 → 15:10</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 bg-white rounded-xl p-1 shadow-sm flex items-center justify-center">
+                        <img src="/images/airlines/jal_logo.png" className="w-full h-full object-contain" />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-black text-wa-ink leading-none">JL508 — CTS/HND</p>
+                        <p className="text-[8px] font-bold text-gray-400 mt-1">11:45 → 13:25</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="space-y-6 border-l-4 border-wa-pink pl-8">
                   <p className="text-[11px] font-black text-wa-pink uppercase tracking-widest">Introduction</p>
                   <p className="text-lg font-serif-jp text-wa-ink leading-relaxed italic font-bold">
