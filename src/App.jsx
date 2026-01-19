@@ -545,7 +545,7 @@ const MagazineView = ({ selectedDay, setSelectedDay, weather, exchangeRate, curr
                 <div className="absolute -top-6 -left-6 writing-vertical-magazine text-[10px] font-black tracking-[0.8em] text-wa-pink/30 uppercase hidden xl:block">EXPLORATION GUIDE</div>
                 <div className="aspect-[21/9] overflow-hidden rounded-[2.5rem] shadow-2xl relative">
                   <img
-                    src="https://images.unsplash.com/photo-1550850839-8dc0c480d530?auto=format&fit=crop&q=80&w=2071"
+                    src="https://images.unsplash.com/photo-1621213271731-89308be73169?auto=format&fit=crop&q=80&w=2070"
                     alt="Hokkaido Summer"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out"
                   />
