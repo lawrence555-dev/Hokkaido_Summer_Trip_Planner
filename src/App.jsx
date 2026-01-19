@@ -1,4 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import {
+  Hotel,
+  Car,
+  Utensils,
+  MapPin,
+  Bed,
+  Sparkles,
+  Camera,
+  Clock,
+  Info,
+  Calendar
+} from 'lucide-react';
 // Deploy trigger: 2026-01-06 21:50
 import { ComparisonRadar, BloomLine } from './components/JournalCharts';
 
@@ -231,7 +243,9 @@ function App() {
               <div className="flex-1">
                 <div className="flex justify-between items-center mb-1">
                   <span className="text-[10px] font-bold text-stone-400">去程 | 07/07 Tue.</span>
-                  <span className="text-[10px] font-black text-wa-purple bg-purple-50 px-2 py-0.5 rounded">JX850</span>
+                  <span className="text-[10px] font-black text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded flex items-center gap-1">
+                    <Clock className="w-2 h-2" /> JX850
+                  </span>
                 </div>
                 <div className="flex justify-between items-end">
                   <div>
@@ -304,8 +318,8 @@ function App() {
 
         {/* Visual Analysis (Charts) */}
         <section className="mb-10 bg-white/50 p-8 rounded-[40px] border border-stone-100 shadow-sm relative overflow-hidden">
-          <h4 className="flex items-center gap-2 text-wa-purple font-bold text-sm mb-8">
-            <span>📊</span> 視覺化方案分析 (Visual Analysis)
+          <h4 className="flex items-center gap-2 text-wa-pink font-bold text-sm mb-8">
+            <Info className="w-4 h-4" /> 視覺化方案分析 (Visual Analysis)
           </h4>
           <div className="flex flex-col gap-12">
             <div className="flex flex-col items-center">
@@ -344,29 +358,30 @@ function App() {
             旅行手帖貼士 (Travel Tips)
           </h4>
           <div className="grid grid-cols-1 gap-4 text-xs text-stone-600 leading-relaxed font-serif-jp">
-            <div className="bg-white/60 p-4 rounded-2xl border border-stone-100 italic">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-base">🛌</span>
+            <div className="bg-white/60 p-4 rounded-2xl border border-stone-100 italic relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-16 h-16 bg-pink-100/50 rounded-full -mr-8 -mt-8"></div>
+              <div className="flex items-center gap-2 mb-2 relative z-10">
+                <Bed className="w-4 h-4 text-pink-500" />
                 <p className="font-bold text-stone-700">房型選擇建議</p>
               </div>
-              <p>預訂時註明需要「Triple Room (三床房)」或「和洋室」，3 位大人才能住得舒適。</p>
+              <p className="relative z-10">預訂時註明需要「Triple Room (三床房)」或「和洋室」，3 位大人才能住得舒適。</p>
             </div>
           </div>
         </section>
 
         <section className="mb-10 rental-card shadow-sm overflow-hidden">
-          <div className="absolute top-0 right-0 bg-wa-purple text-white text-[10px] px-3 py-1 font-bold rounded-bl-lg">
+          <div className="absolute top-0 right-0 bg-wa-pink text-white text-[10px] px-3 py-1 font-bold rounded-bl-lg">
             PRE-TRIP ADVICE
           </div>
-          <h4 className="flex items-center gap-2 text-wa-purple font-bold text-sm mb-4">
-            <span>🚗</span> 租車與用車建議 (Rental Tips)
+          <h4 className="flex items-center gap-2 text-wa-pink font-bold text-sm mb-4">
+            <Car className="w-5 h-5" /> 租車與用車建議 (Rental Tips)
           </h4>
           <div className="space-y-4 text-xs text-stone-600 leading-relaxed font-serif-jp">
             <p>
-              <strong>建議車型：</strong> 務必預約 <span className="text-wa-purple font-bold">7 人座</span> (如 Toyota Noah 或 Voxy)。3 大 1 小加上 4 件大行李與推車，5 人座休旅車絕對塞不下。
+              <strong>建議車型：</strong> 務必預約 <span className="text-wa-pink font-bold">7 人座</span> (如 Toyota Noah 或 Voxy)。3 大 1 小加上 4 件大行李與推車，5 人座休旅車絕對塞不下。
             </p>
             <p>
-              <strong>必備配件：</strong> 領車時務必加購 <span className="text-wa-purple font-bold">HEP (Hokkaido Expressway Pass)</span>，全包高速公路路費最划算。
+              <strong>必備配件：</strong> 領車時務必加購 <span className="text-wa-pink font-bold">HEP (Hokkaido Expressway Pass)</span>，全包高速公路路費最划算。
             </p>
           </div>
         </section>
@@ -378,11 +393,14 @@ function App() {
                 <button
                   key={item.day}
                   onClick={() => setSelectedDay(item.day)}
-                  className={`snap-center shrink-0 flex flex-col items-center justify-center w-[84px] h-[100px] rounded-[32px] border-2 transition-all duration-300 ${selectedDay === item.day
-                    ? 'bg-wa-purple text-white border-wa-purple shadow-lg scale-105'
-                    : 'bg-white/50 text-stone-400 border-white/80 hover:bg-white/80'
+                  className={`snap-center shrink-0 flex flex-col items-center justify-center w-[84px] h-[100px] rounded-[32px] border-2 transition-all duration-300 relative overflow-hidden ${selectedDay === item.day
+                    ? 'bg-wa-pink text-white border-wa-pink shadow-lg scale-105'
+                    : 'bg-white/50 text-pink-300 border-white/80 hover:bg-white/80'
                     }`}
                 >
+                  {selectedDay === item.day && (
+                    <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400/20 to-transparent pointer-events-none"></div>
+                  )}
                   <span className={`text-[10px] font-bold ${selectedDay === item.day ? 'opacity-90' : 'opacity-40'}`}>DAY</span>
                   <span className="text-2xl font-black">{item.day}</span>
                   <span className={`text-[8px] font-bold mt-1 ${selectedDay === item.day ? 'opacity-90' : 'opacity-50'}`}>
@@ -404,7 +422,8 @@ function App() {
                     第{item.day}日
                   </div>
 
-                  <div className="w-16 h-16 rounded-full border border-white/50 backdrop-blur-md flex flex-col items-center justify-center text-wa-purple bg-white/30 shadow-sm -rotate-6 ml-6">
+                  <div className="w-16 h-16 rounded-3xl border border-white/50 backdrop-blur-md flex flex-col items-center justify-center text-wa-pink bg-white/30 shadow-sm -rotate-6 ml-6 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-pink-400"></div>
                     <span className="text-[10px] opacity-40 font-bold">DAY</span>
                     <span className="text-2xl font-black">{item.day}</span>
                   </div>
@@ -415,7 +434,7 @@ function App() {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-serif-jp font-bold mb-8 border-l-4 border-wa-purple/20 pl-4">{item.title}</h3>
+                <h3 className="text-2xl font-serif-jp font-bold mb-8 border-l-4 border-wa-pink/20 pl-4">{item.title}</h3>
 
                 <div className="flex flex-col gap-8 mb-8">
                   <div className="flex gap-4 overflow-x-auto pb-4 snap-x pl-2 no-scrollbar">
@@ -436,8 +455,10 @@ function App() {
                     </h5>
                     <div className="grid grid-cols-1 gap-3">
                       {item.recommendations.map((rec, rIdx) => (
-                        <div key={rIdx} className="glass-light p-3 rounded-2xl border border-white flex items-center gap-3">
-                          <span className="text-lg">{rec.type === 'food' ? '🍲' : '📍'}</span>
+                        <div key={rIdx} className="glass-light p-3 rounded-2xl border border-white flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+                          <div className={`p-2 rounded-xl ${rec.type === 'food' ? 'bg-orange-50 text-orange-500' : 'bg-cyan-50 text-cyan-500'}`}>
+                            {rec.type === 'food' ? <Utensils className="w-4 h-4" /> : <MapPin className="w-4 h-4" />}
+                          </div>
                           <div>
                             <p className="text-xs font-bold text-stone-700">{rec.title}</p>
                             <p className="text-[10px] text-stone-400">{rec.desc}</p>
@@ -453,8 +474,8 @@ function App() {
                       <div key={eIdx} className={`timeline-item ${event.highlight ? 'highlight' : ''}`}>
                         <div className="timeline-dot"></div>
                         <div className="flex items-baseline gap-3">
-                          <span className="text-xs font-black text-stone-400 font-mono w-10 shrink-0">{event.time}</span>
-                          <span className="text-xs font-bold text-wa-purple bg-purple-50 px-2 py-0.5 rounded leading-none shrink-0">{event.label}</span>
+                          <span className="text-xs font-black text-rose-300 font-mono w-10 shrink-0">{event.time}</span>
+                          <span className="text-xs font-bold text-wa-cyan bg-cyan-50 px-2 py-0.5 rounded leading-none shrink-0">{event.label}</span>
                           {event.highlight && <span className="highlight-badge">亮點</span>}
                         </div>
                         <p className="text-sm text-stone-600 mt-2 font-handwriting leading-relaxed pl-14">
@@ -465,11 +486,13 @@ function App() {
                   </div>
                 </div>
 
-                <div className="accommodation-note">
-                  <span className="text-xl">🏨</span>
+                <div className="accommodation-note bg-wa-paper/50 backdrop-blur-sm">
+                  <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white shadow-lg">
+                    <Hotel className="w-5 h-5" />
+                  </div>
                   <div>
-                    <p className="text-[8px] font-bold text-stone-300 uppercase leading-none mb-1">Accommodation</p>
-                    <p className="text-xs font-bold text-stone-700 font-serif-jp">{item.accommodation}</p>
+                    <p className="text-[8px] font-bold text-pink-300 uppercase leading-none mb-1">Accommodation</p>
+                    <p className="text-xs font-bold text-pink-900 font-serif-jp">{item.accommodation}</p>
                   </div>
                 </div>
               </div>
