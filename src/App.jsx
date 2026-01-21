@@ -147,7 +147,7 @@ const itineraryData = [
       { time: "09:30", label: "還車", activity: "抵達 OTS 千歲營業所辦理還車手續。", highlight: true },
       { time: "09:45", label: "接駁", activity: "搭乘 OTS 免費接駁車前往機場國內線航廈。" },
       { time: "10:15", label: "報到", activity: "抵達國內線航廈，辦理行李托運與報到。" },
-      { time: "11:45", label: "飛行", activity: "搭乘 JL508 班機前往羽田機場。再見，北海道！", highlight: true }
+      { time: "11:25", label: "飛行", activity: "搭乘 JL508 班機前往羽田機場。再見，北海道！", highlight: true }
     ],
     accommodation: "東京羽田/溫慢的家",
     photos: ["/images/day7/new_chitose_airport.png", "/images/day7/airport_souvenirs.jpg"],
@@ -258,7 +258,7 @@ const MobileView = ({ selectedDay, setSelectedDay, weather, exchangeRate, curren
                 </div>
                 <div className="flex justify-between items-end">
                   <div>
-                    <p className="text-lg font-black text-stone-700 leading-none">11:45</p>
+                    <p className="text-lg font-black text-stone-700 leading-none">11:25</p>
                     <p className="text-[8px] font-bold text-stone-400 mt-1">新千歲 (國內線D)</p>
                   </div>
                   <div className="flex-1 flex flex-col items-center px-4 mb-2">
@@ -268,7 +268,7 @@ const MobileView = ({ selectedDay, setSelectedDay, weather, exchangeRate, curren
                     <span className="text-[8px] text-stone-300 font-mono">A350 廣體機</span>
                   </div>
                   <div className="text-right">
-                    <p className="text-lg font-black text-stone-700 leading-none">13:25</p>
+                    <p className="text-lg font-black text-stone-700 leading-none">13:05</p>
                     <p className="text-[8px] font-bold text-stone-400 mt-1">羽田 HND (T1)</p>
                   </div>
                 </div>
@@ -577,7 +577,7 @@ const MagazineView = ({ selectedDay, setSelectedDay, weather, exchangeRate, curr
                       </div>
                       <div>
                         <p className="text-[10px] font-black text-wa-ink leading-none">JL508 — CTS/HND</p>
-                        <p className="text-[8px] font-bold text-gray-400 mt-1">11:45 → 13:25</p>
+                        <p className="text-[8px] font-bold text-gray-400 mt-1">11:25 → 13:05</p>
                       </div>
                     </div>
                   </div>
