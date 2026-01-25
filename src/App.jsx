@@ -92,9 +92,9 @@ const itineraryData = [
       { time: "11:30", label: "美食", activity: "富田哈密瓜工房：現切哈密瓜、冰淇淋吃到飽。", highlight: true },
       { time: "13:30", label: "賞花", activity: "隔壁「富田農場」看紫色薰衣草花海。" },
       { time: "18:00", label: "夢幻", activity: "逛「森林精靈露台」夢幻小木屋點燈。" },
-      { time: "19:30", label: "入住", activity: "入住新富良野王子大飯店。" }
+      { time: "19:30", label: "入住", activity: "入住諾佐飯店 Nozo Hotel。" }
     ],
-    accommodation: "新富良野王子大飯店",
+    accommodation: "諾佐飯店 Nozo Hotel",
     photos: ["/images/day4/shikisai_no_oka.jpg", "/images/day4/blue_pond.jpg", "/images/day4/tomita_farm.jpg", "/images/day4/ningle_terrace.jpg"],
     recommendations: [
       { type: "food", title: "薰衣草冰淇淋", desc: "富田農場限定，紫色浪漫滋味。" },
@@ -109,10 +109,10 @@ const itineraryData = [
     timeline: [
       { time: "10:30", label: "出發", activity: "慢享早餐後開往登別（約 2.5 小時）。" },
       { time: "14:00", label: "奇觀", activity: "逛「登別地獄谷」，看硫磺火山與大湯沼川足湯。" },
-      { time: "16:00", label: "入住", activity: "入住第一瀧本館，使用 35 種溫泉池。", highlight: true },
+      { time: "16:00", label: "入住", activity: "入住登別格蘭大飯店。", highlight: true },
       { time: "18:00", label: "放電", activity: "在室內大型水樂園玩划水道，小孩絕對超嗨。" }
     ],
-    accommodation: "第一瀧本館 (超強親子溫泉飯店)",
+    accommodation: "登別格蘭大飯店 Noboribetsu Grand Hotel",
     photos: ["/images/day5/noboribetsu_jigokudani.png", "/images/day5/oyunuma.jpg", "/images/day5/dai_ichi_takimotokan.jpg"],
     recommendations: [
       { type: "spot", title: "大湯沼足湯", desc: "在森林中享受天然溫泉足浴。" }
@@ -127,10 +127,10 @@ const itineraryData = [
     timeline: [
       { time: "09:30", label: "洞爺湖", activity: "退房後開往洞爺湖（約 1 小時）。" },
       { time: "11:00", label: "體驗", activity: "昭和新山熊牧場餵棕熊、搭乘環湖汽船。" },
-      { time: "15:00", label: "入住", activity: "入住乃之風渡假飯店，享受全湖景房。", highlight: true },
+      { time: "15:00", label: "入住", activity: "入住洞爺湖鶴雅度假村光之歌，享受頂級度假體驗。", highlight: true },
       { time: "20:45", label: "煙火", activity: "躺在房間看洞爺湖煙火在窗外綻放。" }
     ],
-    accommodation: "乃之風渡假飯店 (每房皆有面湖大窗)",
+    accommodation: "洞爺湖鶴雅度假村光之歌 Lake Toya Tsuruga Resort Hikarinouta",
     photos: ["/images/day6/showa_shinzan_bear_park.jpg", "/images/day6/toyako_cruise.jpg", "/images/day6/toyako_fireworks.jpg"],
     recommendations: [
       { type: "spot", title: "洞爺湖汽船", desc: "搭船環湖，近距離觀察美麗湖景。" }
@@ -142,7 +142,7 @@ const itineraryData = [
     title: "新千歲空港巡禮：最後的採買與歸途",
     focus: "OTS 還車、玉米麵包、JAL 國內線",
     timeline: [
-      { time: "08:30", label: "出發", activity: "乃之風退房，前往千歲市區。若想買限量玉米麵包建議此時抵達。" },
+      { time: "08:30", label: "出發", activity: "退房後前往千歲市區。若想買限量玉米麵包建議此時抵達。" },
       { time: "09:15", label: "加油", activity: "於 OTS 營業所附近加油站加滿油。" },
       { time: "09:30", label: "還車", activity: "抵達 OTS 千歲營業所辦理還車手續。", highlight: true },
       { time: "09:45", label: "接駁", activity: "搭乘 OTS 免費接駁車前往機場國內線航廈。" },
